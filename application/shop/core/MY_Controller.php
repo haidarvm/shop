@@ -1,15 +1,15 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Shop_Controller extends CI_Controller {
+class MY_Controller extends CI_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model('mproduct');
-        $this->load->model('mcart');
-        $this->load->model('mpages');
-        $this->load->model('mcategory');
         $this->load->model('mmenu');
+        $this->load->model('mpage');
+        $this->load->model('mproduct');
+        $this->load->model('mcategory');
+        $this->load->model('mcart');
         $this->load->model('mcustomer');
         $this->load->model('morder');
         // $cats = array();

@@ -2,7 +2,7 @@
 if (! defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Home extends MY_Controller {
 
     function __construct() {
         parent::__construct();
@@ -15,10 +15,11 @@ class Home extends CI_Controller {
     }
 
     public function show() {
-//         $data['slide'] = $this->mhome->getSlide();
-//         $data['featured'] = $this->mhome->getFeature();
-//         $data['categories'] = $this->mproduct->getAllCategories();
-            echo 'home';
+        // $data['slide'] = $this->mhome->getSlide();
+        // $data['featured'] = $this->mhome->getFeature();
+        // $data['categories'] = $this->mproduct->getAllCategories();
+        $data['title'] = 'Home';
+        $this->load->template('home', $data);
     }
 
 }
