@@ -8,13 +8,16 @@ class MCustomer extends CI_Model {
     function __construct() {
         parent::__construct();
     }
-    
-    function getAllProduct() {
-        
-    }
-    
+
     function getAllCategories() {
-        
+        $query = $this->db->get('category');
+        return checkRs($query);
     }
+    
+    function getCategory($id) {
+        $query = $this->db->get_where('product', array('product_id', $id));
+        return checkRow($query);
+    }
+    
     
 }

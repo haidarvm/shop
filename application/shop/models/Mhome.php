@@ -10,11 +10,17 @@ class MHome extends CI_Model {
     }
     
     function getAllFeatured(){
-        
+
+        echo 'hai';
     }
     
     function getAllSlides() {
-        
+
+        echo 'hai';
+    }
+    
+    function getHome(){
+        echo 'hai';
     }
     
 }
