@@ -12,6 +12,10 @@ class MY_Controller extends CI_Controller {
         $this->load->model('mcart');
         $this->load->model('mcustomer');
         $this->load->model('morder');
+        $this->mmenu = new MMenu();
+        $this->mpage = new Mpage();
+        $this->mproduct = new MProduct();
+        $this->mcategory = new MCategory();
         // $cats = array();
         // $cats = $this->mcats->getAllActiveCategories();
         // $this->categories = $cats;

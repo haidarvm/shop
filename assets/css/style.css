@@ -31,7 +31,7 @@ body a{
 	font-family: 'Lato', sans-serif;
 }
 .search-bar input[type="submit"] {
-	background: url(../images/search.png)no-repeat 0px 0px;
+	background: url(../img/search.png)no-repeat 0px 0px;
 	outline: none;
 	-webkit-appearance: none;
 	border: 0;
@@ -121,7 +121,7 @@ a.simpleCart_empty {
 /*--end-bottom-header--*/
 /*--banner-starts--*/
 .banner-1{
-	background:url(../images/banner.jpg) no-repeat center;
+	background:url(../img/banner.jpg) no-repeat center;
 	min-height:700px;
 	background-size:cover;
 	-webkit-background-size:cover;
@@ -130,7 +130,7 @@ a.simpleCart_empty {
 	-ms-background-size:cover;
 }
 .banner-2{
-	background:url(../images/banner-3.jpg) no-repeat;
+	background:url(../img/banner-3.jpg) no-repeat;
 	min-height:700px;
 	background-size:cover;
 	-webkit-background-size:cover;
@@ -139,7 +139,7 @@ a.simpleCart_empty {
 	-ms-background-size:cover;
 }
 .banner-3{
-	background:url(../images/banner-2.jpg) no-repeat center;
+	background:url(../img/banner-2.jpg) no-repeat center;
 	min-height:700px;
 	background-size:cover;
 	-webkit-background-size:cover;
@@ -179,7 +179,7 @@ a.simpleCart_empty {
   	text-decoration: none;
   	height: 30px;
   	width: 30px;
-  	background: transparent url("../images/arrows.png") no-repeat left top;
+  	background: transparent url("../img/arrows.png") no-repeat left top;
 }
 .callbacks_nav:active {
   	opacity: 1.0;
@@ -387,7 +387,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 	margin-right:10px !important;
 }
 .footer-right ul li span{
-	background:url(../images/social-icons.png) no-repeat;
+	background:url(../img/social-icons.png) no-repeat;
 	width:25px;
 	height:25px;
 	display:block;
@@ -491,7 +491,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 	height: 28px;
 	border: none;
 	text-indent: 100%;
-	background: url(../images/top-arrow.png) no-repeat;
+	background: url(../img/top-arrow.png) no-repeat;
 } 
 /*--start-contact--*/
 .heading h3{
@@ -711,7 +711,7 @@ ol.breadcrumb {
 	color: #999;
 }
 .p-one p i {
-	background: url(../images/cart.png) no-repeat;
+	background: url(../img/cart.png) no-repeat;
 	width: 25px;
 	height: 18px;
 	display: inline-block;
@@ -719,7 +719,7 @@ ol.breadcrumb {
 	vertical-align: middle;
 }
 .product-left:hover .p-one p i{
-	background: url(../images/cart-2.png) no-repeat;
+	background: url(../img/cart-2.png) no-repeat;
 }
 /*--end-product--*/
 /*--start-checkout--*/
@@ -745,7 +745,7 @@ a.add-cart:hover {
 	-ms-transition: 0.5s all;
 }
 .close1,.close2,.close3{
-	background: url('../images/close-1.png') no-repeat 0px 0px;
+	background: url('../img/close-1.png') no-repeat 0px 0px;
 	cursor: pointer;
 	width: 28px;
 	height: 28px;

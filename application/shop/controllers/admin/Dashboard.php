@@ -6,8 +6,7 @@ class Dashboard extends MY_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model('mproduct');
-        $this->mproduct = new MProduct();
+        $this->mcategory = new MCategory();
     }
 
     public function index() {
@@ -16,8 +15,14 @@ class Dashboard extends MY_Controller {
 
     public function home() {
         $data['title'] = "Dashboard Admin";
-//         $data['products'] = $this->mproduct->getAllProduct();
+        $data['categories'] = $this->mcategory->getAllCategories();
         $this->load->admin_template('admin/dashboard', $data);
+    }
+    
+    public function upload(){
+        $this->load->library("uploadhandler");
+        $upload_handler = new UploadHandler();
+        die();
     }
     
 }

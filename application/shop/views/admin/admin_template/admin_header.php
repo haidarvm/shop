@@ -25,16 +25,14 @@
 <!-- Morris chart -->
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/morris.css">
 <!-- jvectormap -->
-<link rel="stylesheet"
-	href="<?php echo base_url();?>assets/js/jquery-jvectormap-1.2.2.css">
+<link rel="stylesheet" href="<?php echo base_url();?>assets/js/jquery-jvectormap-1.2.2.css">
 <!-- Date Picker -->
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/datepicker3.css">
 <!-- Daterange picker -->
-<link rel="stylesheet"
-	href="<?php echo base_url();?>assets/css/daterangepicker-bs3.css">
+<link rel="stylesheet" href="<?php echo base_url();?>assets/css/daterangepicker-bs3.css">
 <!-- bootstrap wysihtml5 - text editor -->
-<link rel="stylesheet"
-	href="<?php echo base_url();?>assets/css/bootstrap3-wysihtml5.min.css">
+<link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap3-wysihtml5.min.css">
+<link rel="stylesheet" href="<?php echo base_url();?>assets/css/jquery.fileupload.css">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,6 +41,9 @@
         <script src="<?php echo base_url();?>assets/js/respond.min.js"></script>
     <![endif]-->
 </head>
+<script type="text/javascript">
+var site_url = '<?php echo base_url()?>';
+</script>
 <body class="skin-blue sidebar-mini">
 	<div class="wrapper">
 
@@ -50,7 +51,7 @@
 			<!-- Logo -->
 			<a href="index2.html" class="logo"> <!-- mini logo for sidebar mini 50x50 pixels -->
 				<span class="logo-mini"><b>A</b>LT</span> <!-- logo for regular state and mobile devices -->
-				<span class="logo-lg"><b>Admin</b>LTE</span>
+				<span class="logo-lg"><b>Admin</b>Shop</span>
 			</a>
 			<!-- Header Navbar: style can be found in header.less -->
 			<nav class="navbar navbar-static-top" role="navigation">
@@ -237,14 +238,14 @@
 						<li class="dropdown user user-menu"><a href="#"
 							class="dropdown-toggle" data-toggle="dropdown"> <img
 								src="<?php echo base_url();?>assets/img/user2-160x160.jpg" class="user-image"
-								alt="User Image"> <span class="hidden-xs">Alexander Pierce</span>
+								alt="User Image"> <span class="hidden-xs">haidarvm</span>
 						</a>
 							<ul class="dropdown-menu">
 								<!-- User image -->
 								<li class="user-header"><img src="<?php echo base_url();?>assets/img/user2-160x160.jpg"
 									class="img-circle" alt="User Image">
 									<p>
-										Alexander Pierce - Web Developer <small>Member since Nov. 2012</small>
+										haidarvm - Web Developer <small>Member since Nov. 2009</small>
 									</p></li>
 								<!-- Menu Body -->
 								<li class="user-body">

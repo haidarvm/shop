@@ -21,3 +21,4 @@
 [Tue Aug 11 18:20:20.882609 2015] [:error] [pid 4355] [client 127.0.0.1:47757] PHP Fatal error:  Call to undefined method Product::all_product() in /home/public_html/shop/application/shop/controllers/shop/Product.php on line 14
 [Tue Aug 11 18:20:28.093197 2015] [:error] [pid 4356] [client 127.0.0.1:47758] PHP Fatal error:  Call to undefined method Product::all_product() in /home/public_html/shop/application/shop/controllers/shop/Product.php on line 14
 [Wed Aug 12 11:56:02.932108 2015] [:error] [pid 11430] [client 127.0.0.1:52404] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/public_html/shop/application/shop/controllers/admin/Dashboard.php on line 21
+[Wed Aug 12 12:51:30.122849 2015] [:error] [pid 11905] [client 127.0.0.1:52824] PHP Fatal error:  Call to undefined method MHome::getSlide() in /home/public_html/shop/application/shop/controllers/Home.php on line 19

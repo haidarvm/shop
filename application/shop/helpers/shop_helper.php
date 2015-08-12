@@ -25,3 +25,15 @@ function checkRow($query) {
         return false;
     }
 }
+
+function fire($log) {
+    $ci = & get_instance();
+    $ci->load->library('firephp');
+    return $ci->firephp->log($log, __METHOD__);
+}
+
+function uploader($log) {
+    $ci = & get_instance();
+    $ci->load->library('uploadhandler');
+    return $ci->uploadhandler->log($log, __METHOD__);
+}
