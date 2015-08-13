@@ -1,6 +1,7 @@
 $(function() {
 	'use strict';
 	var url = site_url + "upload/";
+	var filename = 'dist.jpg';
 	$('#fileupload').fileupload({
 		url : url,
 		dataType : 'json',
@@ -11,14 +12,14 @@ $(function() {
         // send Blob objects via XHR requests:
         disableImageResize: /Android(?!.*Chrome)|Opera/
             .test(window.navigator.userAgent),
-        previewMaxWidth: 100,
-        previewMaxHeight: 100,
+        previewMaxWidth: 200,
+        previewMaxHeight: 200,
         previewCrop: true
 	}).on('fileuploadadd', function (e, data) {
         data.context = $('<div/>').appendTo('#files');
         $.each(data.files, function (index, file) {
             var node = $('<p/>')
-                    .append($('<span/>').text(file.name));
+                    .append($('<span/>').text(filename));
             if (!index) {
                 node
                     .append('<br>');

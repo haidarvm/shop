@@ -19,10 +19,4 @@ class Dashboard extends MY_Controller {
         $this->load->admin_template('admin/dashboard', $data);
     }
     
-    public function upload(){
-        $this->load->library("uploadhandler");
-        $upload_handler = new UploadHandler();
-        die();
-    }
-    
 }
