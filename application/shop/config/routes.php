@@ -56,7 +56,7 @@ $route['products'] = 'shop/product/products/';
 $route['category/(:any)'] = 'shop/category/category/$1';
 $route['categories'] = 'shop/category/categories/';
 
-// $route['upload'] = 'admin/dashboard/upload';
+$route['upload'] = 'upload/do_upload';
 
 $route['admin'] = 'admin/dashboard/home';
 $route['dashboard'] = 'admin/dashboard/home';

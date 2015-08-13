@@ -110,14 +110,14 @@
 						<!-- tools box -->
 						<div class="pull-right box-tools">
 							<button class="btn btn-info btn-sm" data-widget="remove"
-								data-toggle="tooltip" title="Remove">
+								data-toggle="tooltip" title="Add More">
 								<i class="fa fa-times"></i>
 							</button>
 						</div>
 						<!-- /. tools -->
 					</div>
 					<div class="box-body">
-						<form action="#" class="form-horizontal" method="post">
+						<form action="#" class="form-horizontal" id="quick-product" method="post">
 							<div class="form-group">
 								<label class="col-sm-2 control-label" for="name">Product</label>
 								<div class="col-sm-10">
@@ -127,9 +127,9 @@
 							<div class="form-group">
 								<label class="col-sm-2 control-label" for="name">Category</label>
 								<div class="col-sm-10">
-									<select name="category" class="form-control">
+									<select name="category_id" class="form-control">
 									<?php foreach($categories as $cat) {?>
-										<option><?php echo $cat->name;?></option>
+										<option value="<?php echo $cat->category_id;?>"><?php echo $cat->name;?></option>
 									<?php }?>
 									</select>
 								</div>
@@ -143,13 +143,13 @@
 							<div class="form-group">
 								<label class="col-sm-2 control-label" for="name">Description</label>
 								<div class="col-sm-10">
-									<textarea class="textarea" placeholder="Description"style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+									<textarea name="description" class="textarea" placeholder="Description" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-sm-2 control-label" for="name">Stock</label>
 								<div class="col-sm-10">
-									<input id="name" name="price" class="form-control" type="text" placeholder="Qty">
+									<input id="name" name="stock" class="form-control" type="text" placeholder="Qty">
 								</div>
 							</div>
 							<div class="form-group">
@@ -160,6 +160,7 @@
                                         <span>Add files...</span>
                                         <!-- The file input field used as target for the file upload widget -->
                                         <input id="fileupload" type="file" name="userfile" multiple>
+                                        <input type="hidden" name="product_id" id="product_id" value="<?php echo !empty($productDraft) ? $productDraft->product_id : "";?>">
                                     </span>
                                 </div>
 							</div>
@@ -177,7 +178,7 @@
 						</form>
 					</div>
 					<div class="box-footer clearfix">
-						<button class="pull-right btn btn-default" id="sendEmail">
+						<button class="pull-right btn btn-default" id="submit">
 							Submit <i class="fa fa-arrow-circle-right"></i>
 						</button>
 					</div>

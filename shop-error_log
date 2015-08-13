@@ -29,3 +29,4 @@
 [Thu Aug 13 11:50:05.242203 2015] [:error] [pid 5795] [client 127.0.0.1:49301] PHP Fatal error:  Call to undefined method MProduct::getAllCategories() in /home/public_html/shop/application/shop/controllers/admin/Product.php on line 19
 [Thu Aug 13 11:50:20.144166 2015] [:error] [pid 6730] [client 127.0.0.1:49302] PHP Fatal error:  Call to undefined function form_open_multipart() in /home/public_html/shop/application/shop/views/admin/product.php on line 9
 [Thu Aug 13 11:50:49.567516 2015] [:error] [pid 6600] [client 127.0.0.1:49303] PHP Fatal error:  Call to undefined method MY_Loader::libraries() in /home/public_html/shop/application/shop/controllers/admin/Product.php on line 11
+[Thu Aug 13 17:20:41.250362 2015] [:error] [pid 14838] [client 127.0.0.1:52963] PHP Fatal error:  Cannot use object of type stdClass as array in /home/public_html/shop/application/shop/controllers/Upload.php on line 55, referer: http://shop.dev/admin

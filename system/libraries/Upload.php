@@ -644,7 +644,7 @@ class CI_Upload {
 	 * This function takes a filename/path as input and looks for the
 	 * existence of a file with the same name. If found, it will append a
 	 * number to the end of the filename to avoid overwriting a pre-existing file.
-	 *
+	 * haidarvm editted using dash / minus on already exists filename
 	 * @param	string	$path
 	 * @param	string	$filename
 	 * @return	string
@@ -666,9 +666,9 @@ class CI_Upload {
 		$new_filename = '';
 		for ($i = 1; $i < $this->max_filename_increment; $i++)
 		{
-			if ( ! file_exists($path.$filename.$i.$this->file_ext))
+			if ( ! file_exists($path.$filename.$i.$this->file_ext) && ! file_exists($path.$filename.'-'.$i.$this->file_ext))
 			{
-				$new_filename = $filename.$i.$this->file_ext;
+				$new_filename = $filename.'-'.$i.$this->file_ext;
 				break;
 			}
 		}
