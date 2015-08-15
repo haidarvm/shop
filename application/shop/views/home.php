@@ -46,14 +46,14 @@
 				<div class="col-md-6 banner-bottom-left">
 					<div class="bnr-one">
 						<div class="bnr-left">
-							<h1><a href="single.html">Duis dictum volutpat</a></h1>
+							<h1><a href="#">Duis dictum volutpat</a></h1>
 							<p>Nulla tempus facilisis purus at.</p>
 							<div class="b-btn"> 
-								<a href="single.html">SHOP NOW</a>
+								<a href="#">SHOP NOW</a>
 							</div>
 						</div>
 						<div class="bnr-right"> 
-							<a href="single.html"><img src="<?php echo base_url();?>assets/img/b-1.jpg" alt="" /></a>
+							<a href="#"><img src="<?php echo base_url();?>assets/img/b-1.jpg" alt="" /></a>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -61,14 +61,14 @@
 				<div class="col-md-6 banner-bottom-right">
 					<div class="bnr-two">
 						<div class="bnr-left">
-							<h2><a href="single.html">Phasellus quis nunc</a></h2>
+							<h2><a href="#">Phasellus quis nunc</a></h2>
 							<p>Nulla tempus facilisis purus at.</p>
 							<div class="b-btn"> 
-								<a href="single.html">SHOP NOW</a>
+								<a href="#">SHOP NOW</a>
 							</div>
 						</div>
 						<div class="bnr-right"> 
-							<a href="single.html"><img src="<?php echo base_url();?>assets/img/b-2.jpg" alt="" /></a>
+							<a href="#"><img src="<?php echo base_url();?>assets/img/b-2.jpg" alt="" /></a>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -84,7 +84,7 @@
 			<div class="product-one">
 				<div class="col-md-3 product-left"> 
 					<div class="p-one simpleCart_shelfItem">							
-							<a href="single.html">
+							<a href="#">
 								<img src="<?php echo base_url();?>assets/img/shoes-1.png" alt="" />
 								<div class="mask">
 									<span>Quick View</span>
@@ -98,7 +98,7 @@
 				<div class="col-md-3 product-left"> 
 					<div class="p-one simpleCart_shelfItem">
 						
-						<a href="single.html">
+						<a href="#">
 								<img src="<?php echo base_url();?>assets/img/shoes-2.png" alt="" />
 								<div class="mask">
 									<span>Quick View</span>
@@ -112,7 +112,7 @@
 				<div class="col-md-3 product-left"> 
 					<div class="p-one simpleCart_shelfItem">
 						
-						<a href="single.html">
+						<a href="#">
 								<img src="<?php echo base_url();?>assets/img/shoes-3.png" alt="" />
 								<div class="mask">
 									<span>Quick View</span>
@@ -126,7 +126,7 @@
 				<div class="col-md-3 product-left"> 
 					<div class="p-one simpleCart_shelfItem">
 						
-						<a href="single.html">
+						<a href="#">
 								<img src="<?php echo base_url();?>assets/img/shoes-13.png" alt="" />
 								<div class="mask">
 									<span>Quick View</span>
@@ -143,7 +143,7 @@
 				<div class="col-md-3 product-left"> 
 					<div class="p-one simpleCart_shelfItem">
 						
-						<a href="single.html">
+						<a href="#">
 								<img src="<?php echo base_url();?>assets/img/shoes-5.png" alt="" />
 								<div class="mask">
 									<span>Quick View</span>
@@ -157,7 +157,7 @@
 				<div class="col-md-3 product-left"> 
 					<div class="p-one simpleCart_shelfItem">
 						
-						<a href="single.html">
+						<a href="#">
 								<img src="<?php echo base_url();?>assets/img/shoes-6.png" alt="" />
 								<div class="mask">
 									<span>Quick View</span>
@@ -171,7 +171,7 @@
 				<div class="col-md-3 product-left"> 
 					<div class="p-one simpleCart_shelfItem">
 						
-						<a href="single.html">
+						<a href="#">
 								<img src="<?php echo base_url();?>assets/img/shoes-7.png" alt="" />
 								<div class="mask">
 									<span>Quick View</span>
@@ -185,7 +185,7 @@
 				<div class="col-md-3 product-left"> 
 					<div class="p-one simpleCart_shelfItem">
 						
-						<a href="single.html">
+						<a href="#">
 								<img src="<?php echo base_url();?>assets/img/shoes-8.png" alt="" />
 								<div class="mask">
 									<span>Quick View</span>
@@ -207,22 +207,22 @@
 			<div class="abt-shoe-main">
 				<div class="col-md-4 abt-shoe-left">
 					<div class="abt-one">
-						<a href="single.html"><img src="<?php echo base_url();?>assets/img/abt-1.jpg" alt="" /></a>
-						<h4><a href="single.html">Cras dolor ligula</a></h4>
+						<a href="#"><img src="<?php echo base_url();?>assets/img/abt-1.jpg" alt="" /></a>
+						<h4><a href="#">Cras dolor ligula</a></h4>
 						<p>Phasellus auctor vulputate egestas. Nulla facilisi. Cras dolor ligula, pharetra vitae efficitur ac, tempus vitae nisl. Aliquam erat volutpat. </p>
 					</div>
 				</div>
 				<div class="col-md-4 abt-shoe-left">
 					<div class="abt-one">
-						<a href="single.html"><img src="<?php echo base_url();?>assets/img/abt-2.jpg" alt="" /></a>
-						<h4><a href="single.html">Cras dolor ligula</a></h4>
+						<a href="#"><img src="<?php echo base_url();?>assets/img/abt-2.jpg" alt="" /></a>
+						<h4><a href="#">Cras dolor ligula</a></h4>
 						<p>Phasellus auctor vulputate egestas. Nulla facilisi. Cras dolor ligula, pharetra vitae efficitur ac, tempus vitae nisl. Aliquam erat volutpat. </p>
 					</div>
 				</div>
 				<div class="col-md-4 abt-shoe-left">
 					<div class="abt-one">
-						<a href="single.html"><img src="<?php echo base_url();?>assets/img/abt-3.jpg" alt="" /></a>
-						<h4><a href="single.html">Cras dolor ligula</a></h4>
+						<a href="#"><img src="<?php echo base_url();?>assets/img/abt-3.jpg" alt="" /></a>
+						<h4><a href="#">Cras dolor ligula</a></h4>
 						<p>Phasellus auctor vulputate egestas. Nulla facilisi. Cras dolor ligula, pharetra vitae efficitur ac, tempus vitae nisl. Aliquam erat volutpat. </p>
 					</div>
 				</div>
