@@ -28,7 +28,7 @@ class Product extends MY_Controller {
         }
         $data['productImgDraft'] = $this->mproduct->getProductImgDraft($data['productDraft']->product_id);
         $data['categories'] = $this->mcategory->getAllCategories();
-        $this->load->admin_template('admin/blank', $data);
+        $this->load->admin_template('admin/product', $data);
     }
 
     public function insert_quick_product() {
