@@ -8,6 +8,7 @@ class Dashboard extends MY_Controller {
         parent::__construct();
         $this->load->model('admin/mdashboard');
         $this->mdashboard = new MDashboard();
+        $this->mproduct = new MProduct();
         $this->mcategory = new MCategory();
     }
 
@@ -17,11 +18,11 @@ class Dashboard extends MY_Controller {
 
     public function home() {
         $data['title'] = "Dashboard Admin";
-        $data['productDraft'] = $this->mdashboard->getProductDraft();
+        $data['productDraft'] = $this->mproduct->getProductDraft();
         if (! $data['productDraft']) {
             $data_draft['name'] = 'draft';
-            $insert_id = $this->mdashboard->insertQuickProduct($data_draft);
-            $data['productDraft'] = $this->mdashboard->getLatestProductDraft($insert_id);
+            $insert_id = $this->mproduct->insertQuickProduct($data_draft);
+            $data['productDraft'] = $this->mproduct->getLatestProductDraft($insert_id);
         }
         $data['categories'] = $this->mcategory->getAllCategories();
         $this->load->admin_template('admin/dashboard', $data);
@@ -31,8 +32,19 @@ class Dashboard extends MY_Controller {
         $post = $this->input->post();
         unset($post['_wysihtml5_mode']);
         // print_r($post);
-        $post['slug'] = slugify($post['name']);
-        return $this->mdashboard->editProduct($post, $post['product_id']);
+        $post['slug'] = $this->checkSlug($post['name']);
+        $this->mproduct->editProduct($post, $post['product_id']);
+        echo json_encode($post);
+    }
+
+    public function checkSlug($slug) {
+        $slugify = slugify($slug);
+        $checkSlug = $this->mproduct->checkSlug($slug);
+        if ($checkSlug) {
+            return $checkSlug;
+        } else {
+            return $slugify;
+        }
     }
 
 }

@@ -2,7 +2,7 @@
         <div class="pull-right hidden-xs">
           <b>Version</b> 2.2.0
         </div>
-        <strong>Copyright &copy; 2014-<?php echo date('Y')?> <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2014-<?php echo date('Y')?> <a href="http://almsaeedstudio.com">Almsaeed Studio</a> &amp; Engine by <a href="https://github.com/haidarvm">haidarvm</a>.</strong> All rights reserved.
       </footer>
 
       <!-- Control Sidebar -->
@@ -182,6 +182,12 @@
     </script>
     <!-- Bootstrap 3.3.4 -->
     <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+    <!-- For Price Format -->
+    <script src="<?php echo base_url();?>assets/js/jquery.price_format.2.0.min.js"></script>
+    <!-- BlockUI.js UI For Blocking -->
+    <script src="<?php echo base_url();?>assets/js/jquery.blockUI.js"></script>
+    <!-- For Main Shop JS -->
+    <script src="<?php echo base_url();?>assets/js/shop.js"></script>
     <!-- Morris.js charts -->
     <script src="<?php echo base_url();?>assets/js/raphael-min.js"></script>
     <script src="<?php echo base_url();?>assets/js/morris.min.js"></script>
@@ -197,8 +203,8 @@
     <script src="<?php echo base_url();?>assets/js/daterangepicker.js"></script>
     <!-- datepicker -->
     <script src="<?php echo base_url();?>assets/js/bootstrap-datepicker.js"></script>
-    <!-- Bootstrap WYSIHTML5 -->
-    <script src="<?php echo base_url();?>assets/js/bootstrap3-wysihtml5.all.min.js"></script>
+    <!-- Bootstrap WYSIHTML5
+    <script src="<?php echo base_url();?>assets/js/bootstrap3-wysihtml5.all.min.js"></script> -->
     <!-- Slimscroll -->
     <script src="<?php echo base_url();?>assets/js/jquery.slimscroll.min.js"></script>
     <!-- FastClick -->

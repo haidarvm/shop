@@ -6,10 +6,64 @@
  **/
 
 $(function() {
-	$('#submit').click(function() {
-		var data = $('#quick-product').serializeArray();
-		// data.push({name: 'wordlist', value: wordlist});
-		$.post(site_url + "admin/dashboard/insert_quick_product", data);
+	$('#submit').click(
+			function() {
+				$('#quick-product-box').block({
+					message : '<h1>Processing</h1>',
+					css : {
+						border : 'none',
+						padding : '15px',
+						backgroundColor : '#000',
+						'-webkit-border-radius' : '10px',
+						'-moz-border-radius' : '10px',
+						opacity : .5,
+						color : '#fff'
+					}
+				});
+				var product_data = $('#quick-product').serializeArray();
+				$.ajax({
+					method : "POST",
+					url : site_url + "admin/dashboard/insert_quick_product",
+					data : product_data
+				// On Done Insert New Product
+				}).done(function(msg) {
+					console.log("Product Created: " + msg);
+					$('#quick-product-box').block({
+						message : '<h2>Successfully Created </h2>' +
+						// '<p>' + msg + '</p>' +
+						'You can Create New one',
+						css : {
+							border : 'none',
+							padding : '15px',
+							backgroundColor : '#000',
+							'-webkit-border-radius' : '10px',
+							'-moz-border-radius' : '10px',
+							opacity : .5,
+							color : '#fff'
+						}
+					});
+					setInterval(function() {
+						$('#quick-product-box').unblock();
+					}, 1500);
+					$('#files').empty();
+					$(".progress-bar").css("width", "0%");
+				}).always(
+						function() {
+							$(':input', '#quick-product-box').not(':button, :submit, :reset')
+							.val('').removeAttr('checked').removeAttr('selected');
+//							$('#files').remove();
+							// $('#description').editor.clear();
+							// $("input[name='_wysihtml5_mode']").val('');
+							// $('#description').data("wysihtml5").editor.clear();
+						});
+			});
+	// data.push({name: 'wordlist', value: wordlist});
+	// good one but cannot use for on done
+	// $.post(site_url + "admin/dashboard/insert_quick_product",
+	// product_data);
+
+	$('#createnew').click(function() {
+		$('#quick-product-box').unblock();
 	});
 	// $('#submit').click(function() {
 	// var data = $('#quick-product').serialize();
@@ -46,7 +100,7 @@ $(function() {
 	});
 
 	// bootstrap WYSIHTML5 - text editor
-	$(".textarea").wysihtml5();
+	// $(".textarea").wysihtml5();
 
 	$('.daterange')
 			.daterangepicker(

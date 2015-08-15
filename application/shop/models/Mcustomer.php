@@ -11,7 +11,7 @@ class MCustomer extends CI_Model {
 
     function getAllCategories() {
         $query = $this->db->get('category');
-        return checkRs($query);
+        return checkRes($query);
     }
     
     function getCategory($id) {

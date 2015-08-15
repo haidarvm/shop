@@ -5,7 +5,7 @@
 // $CI->load->library('database');
 // return $CI;
 // }
-function checkRs($query) {
+function checkRes($query) {
     // $CI =& get_instance();
     // $CI->load->library('database');
     if ($query->num_rows() > 0) {
@@ -23,6 +23,10 @@ function checkRow($query) {
     } else {
         return false;
     }
+}
+
+function numberOnly($num){
+    return preg_replace('/\D/', '', $num);
 }
 
 function fire($log) {
