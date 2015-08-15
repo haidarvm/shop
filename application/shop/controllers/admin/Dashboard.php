@@ -42,6 +42,18 @@ class Dashboard extends MY_Controller {
         echo json_encode($post);
     }
 
+    public function insert_draft_product() {
+        $post = $this->input->post();
+        $dataDraft['name'] = 'draft';
+        $product_id = $this->mproduct->insertQuickProduct($dataDraft);
+        $dataImgDraft['product_id'] = $product_id;
+        $dataImgDraft['name'] = 'draft';
+        $image_id = $this->mproduct->insertQuickProductImg($dataImgDraft);
+        $data['product_id'] = $product_id;
+        $data['image_id'] = $image_id;
+        echo json_encode($data);
+    }
+
     public function checkSlug($slug) {
         $slugify = slugify($slug);
         $checkSlug = $this->mproduct->checkSlug($slug);

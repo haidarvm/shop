@@ -1,9 +1,24 @@
 /*
- * Author: Abdullah A Almsaeed
- * Date: 4 Jan 2014
+ * Author: Haidar Mansur Mar'ie
+ * Date: August 15 2015
  * Description:
- *      This is a demo file used only for the main dashboard (index.html)
+ *      This is a dashboard js for insert quick product and some basic report
  **/
+
+function createNewDraft(){
+	$.ajax({
+		method : "POST",
+		url : site_url + "admin/dashboard/insert_draft_product",
+	// On Done Insert New Product
+	}).done(function(msg) {
+		console.log("Product Draft Created: " + msg);
+		var data = JSON.parse(msg);
+		console.log('product_id' + data.product_id);
+		$('#product_id').val(data.product_id);
+		$('#image_id').val(data.image_id);
+//		alert(d.customer.first_name);
+	})
+}
 
 $(function() {
 	$('#submit').click(
@@ -47,6 +62,7 @@ $(function() {
 					}, 1500);
 					$('#files').empty();
 					$(".progress-bar").css("width", "0%");
+					createNewDraft();
 				}).always(
 						function() {
 							$(':input', '#quick-product-box').not(':button, :submit, :reset')
@@ -78,6 +94,14 @@ $(function() {
 	// });
 	// });
 
+	
+	/*
+	 * Author: Abdullah A Almsaeed
+	 * Date: 4 Jan 2014
+	 * Description:
+	 *      This is a demo file used only for the main dashboard (index.html)
+	 **/
+	
 	"use strict";
 
 	// Make the dashboard widgets sortable Using jquery UI
