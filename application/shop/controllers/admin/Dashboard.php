@@ -18,15 +18,16 @@ class Dashboard extends MY_Controller {
 
     public function home() {
         $data['title'] = "Dashboard Admin";
+        $data['chart'] = true;
         $data['productDraft'] = $this->mproduct->getProductDraft();
         if (! $data['productDraft']) {
             $dataDraft['name'] = 'draft';
             $insertProductId = $this->mproduct->insertQuickProduct($dataDraft);
             $dataImgDraft['product_id'] = $insertProductId;
             $dataImgDraft['name'] = 'draft';
-            $insertProductImageId = $this->mproduct->insertQuickProductImg($dataImgDraft);
+            // $insertProductImageId = $this->mproduct->insertQuickProductImg($dataImgDraft);
             $data['productDraft'] = $this->mproduct->getLatestProductDraft($insertProductId);
-            $data['productImgDraft'] = $this->mproduct->getLatestProductImgDraft($insertProductId);
+            $data['productImgDraft'] = null;
         }
         $data['productImgDraft'] = $this->mproduct->getProductImgDraft($data['productDraft']->product_id);
         $data['categories'] = $this->mcategory->getAllCategories();
@@ -49,9 +50,9 @@ class Dashboard extends MY_Controller {
         $product_id = $this->mproduct->insertQuickProduct($dataDraft);
         $dataImgDraft['product_id'] = $product_id;
         $dataImgDraft['name'] = 'draft';
-        $image_id = $this->mproduct->insertQuickProductImg($dataImgDraft);
+        // $image_id = $this->mproduct->insertQuickProductImg($dataImgDraft);
         $data['product_id'] = $product_id;
-        $data['image_id'] = $image_id;
+        $data['image_id'] = null;
         echo json_encode($data);
     }
 

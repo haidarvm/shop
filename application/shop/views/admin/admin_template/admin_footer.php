@@ -187,8 +187,8 @@
     <!-- BlockUI.js UI For Blocking -->
     <script src="<?php echo base_url();?>assets/js/jquery.blockUI.js"></script>
     <!-- For Main Shop JS -->
-    <script src="<?php echo base_url();?>assets/js/dashboard.js"></script>
     <script src="<?php echo base_url();?>assets/js/shop.js"></script>
+    <?php if(!empty($chart)) :?>
     <!-- Morris.js charts -->
     <script src="<?php echo base_url();?>assets/js/raphael-min.js"></script>
     <script src="<?php echo base_url();?>assets/js/morris.min.js"></script>
@@ -210,16 +210,18 @@
     <script src="<?php echo base_url();?>assets/js/jquery.slimscroll.min.js"></script>
     <!-- FastClick -->
     <script src="<?php echo base_url();?>assets/js/fastclick.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="<?php echo base_url();?>assets/js/app.min.js"></script>
+    <script src="<?php echo base_url();?>assets/js/dashboard.js"></script>
+    <script src="<?php echo base_url();?>assets/js/demo.js"></script>
+    <?php endif;?>
     <!-- For Upload Only  -->
 	<script src="<?php echo base_url();?>assets/js/load-image.all.min.js"></script>
 	<script src="<?php echo base_url();?>assets/js/jquery.fileupload.js"></script>
 	<script src="<?php echo base_url();?>assets/js/jquery.fileupload-process.js"></script>
     <script src="<?php echo base_url();?>assets/js/jquery.fileupload-image.js"></script>
     <script src="<?php echo base_url();?>assets/js/upload.js"></script>
-    <!-- AdminLTE App -->
-    <script src="<?php echo base_url();?>assets/js/app.min.js"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="<?php echo base_url();?>assets/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   </body>
 </html>

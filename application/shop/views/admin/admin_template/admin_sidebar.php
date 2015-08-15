@@ -37,7 +37,7 @@
 					<li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard
 							v2</a></li>
 				</ul></li>
-			<li><a href="#"><i class="fa fa-cubes"></i><span> Product</span></a></li>
+			<li><a href="<?php echo site_url()?>admin/product"><i class="fa fa-cubes"></i><span> Product</span></a></li>
 			<li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
 		</ul>
 	</section>

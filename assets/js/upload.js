@@ -1,9 +1,7 @@
 $('#fileupload')
 		.fileupload(
 				{
-					url : site_url + "upload/do_upload/"
-							+ getUrlParameter('product_id') + "/"
-							+ getUrlParameter('image_id'),
+					url : site_url + "upload/do_upload/" + product_id + "/" + image_id,
 					dataType : 'json',
 					acceptFileTypes : /(\.|\/)(gif|jpe?g|png)$/i,
 					maxFileSize : 999000,

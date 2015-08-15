@@ -10,13 +10,15 @@ class Upload extends MY_Controller {
         $this->mproduct = new MProduct();
     }
 
-    public function do_upload($product_id, $image_id=NULL) {
+    public function do_upload($product_id) {
         $upload_path_url = base_url() . 'assets/files/';
         
         $config['upload_path'] = FCPATH . 'assets/files/';
         $dataDraftImg['product_id'] = $product_id;
         $dataDraftImg['name'] = 'draft';
-        $image_id = ! empty($image_id) ? $image_id : $this->mproduct->insertQuickProductImg($dataDraftImg);
+        // echo 'prod from upload ='.$product_id.'<br>';
+        $image_id = $this->mproduct->insertQuickProductImg($dataDraftImg);
+        // $image_id = ! empty($image_id) ? $image_id : $this->mproduct->insertQuickProductImg($dataDraftImg);
         $config['file_name'] = $image_id;
         $config['allowed_types'] = 'jpg|jpeg|png|gif';
         $config['max_size'] = '3000000';
