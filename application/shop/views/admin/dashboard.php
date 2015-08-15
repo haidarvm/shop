@@ -160,6 +160,7 @@
                                         <!-- The file input field used as target for the file upload widget -->
                                         <input id="fileupload" type="file" name="userfile" multiple>
                                         <input type="hidden" name="product_id" id="product_id" value="<?php echo !empty($productDraft) ? $productDraft->product_id : "";?>">
+                                        <input type="hidden" name="image_id" id="image_id" value="<?php echo !empty($productImgDraft) ? $productImgDraft->image_id : "";?>">
                                     </span>
                                 </div>
 							</div>

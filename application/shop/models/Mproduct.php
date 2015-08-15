@@ -25,9 +25,21 @@ class MProduct extends CI_Model {
         $query = $this->db->get_where('product', array('name' => 'draft'));
         return checkRow($query);
     }
+    
+    function getProductImgDraft($product_id) {
+        $this->db->order_by('image_id', "desc");
+        $this->db->limit(1);
+        $query = $this->db->get_where('product_image', array('product_id' => $product_id,'name' => 'draft'));
+        return checkRow($query);
+    }
 
     function getLatestProductDraft($id) {
         $query = $this->db->get_where('product', array('product_id' => $id));
+        return checkRow($query);
+    }
+    
+    function getLatestProductImgDraft($id) {
+        $query = $this->db->get_where('product_image', array('product_id' => $id));
         return checkRow($query);
     }
 
@@ -75,11 +87,23 @@ class MProduct extends CI_Model {
         $query = $this->db->insert('product', $data);
         return $this->db->insert_id();
     }
+    
+    function insertQuickProductImg($data) {
+        $query = $this->db->insert('product_image', $data);
+        return $this->db->insert_id();
+    }
 
     function editProduct($data, $id) {
         unset($data['product_id']);
+        unset($data['image_id']);
         $data['price'] = numberOnly($data['price']);
         $query = $this->db->update('product', $data, array('product_id' => $id));
+        return $query;
+    }
+
+    function editProductImg($data, $id) {
+        unset($data['image_id']);
+        $query = $this->db->update('product_image', $data, array('image_id' => $id));
         return $query;
     }
 

@@ -1,6 +1,8 @@
 $(function() {
 	var product_id = $('#product_id').val();
-	var urls = site_url + "upload/do_upload/" + $('#product_id').val();
+	var url_upload = site_url + "upload/do_upload/" + $('#product_id').val() + "/" + $('#image_id').val();
+	console.log(url_upload);
+//	var urls = site_url + "upload/do_upload/" + $('#product_id').val();
 //	if ($('#product_id').val() ==""){
 //		$('input[type=file]').click(function() {
 //			$.post( site_url + "admin/dashboard/insert_quick_product", {
@@ -15,9 +17,8 @@ $(function() {
 //		});
 //	};
 	$('#fileupload')
-			.fileupload(
-					{
-						url : site_url + "upload/do_upload/" + $('#product_id').val(),
+			.fileupload({
+						url : url_upload,
 						dataType : 'json',
 						acceptFileTypes : /(\.|\/)(gif|jpe?g|png)$/i,
 						maxFileSize : 999000,

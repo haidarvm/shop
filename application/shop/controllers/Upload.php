@@ -9,12 +9,15 @@ class Upload extends MY_Controller {
         $this->load->model('mproduct');
         $this->mproduct = new MProduct();
     }
-    
-    public function do_upload($id) {
+
+    public function do_upload($product_id, $image_id=NULL) {
         $upload_path_url = base_url() . 'assets/files/';
         
         $config['upload_path'] = FCPATH . 'assets/files/';
-        $config['file_name'] = $id;
+        $dataDraftImg['product_id'] = $product_id;
+        $dataDraftImg['name'] = 'draft';
+        $image_id = ! empty($image_id) ? $image_id : $this->mproduct->insertQuickProductImg($dataDraftImg);
+        $config['file_name'] = $image_id;
         $config['allowed_types'] = 'jpg|jpeg|png|gif';
         $config['max_size'] = '3000000';
         
@@ -33,7 +36,7 @@ class Upload extends MY_Controller {
                     $foundFiles[$f]['deleteUrl'] = base_url() . 'upload/deleteImage/' . $fileName;
                     $foundFiles[$f]['deleteType'] = 'DELETE';
                     $foundFiles[$f]['error'] = null;
-                    $f++;
+                    $f ++;
                 }
             }
             $this->output->set_content_type('application/json')->set_output(json_encode(array('files' => $foundFiles)));
@@ -65,7 +68,7 @@ class Upload extends MY_Controller {
             // print_r($info);
             
             $files[] = $info;
-            $data_upload['product_id'] = $id;
+            $data_upload['image_id'] = $image_id;
             $data_upload['name'] = $data['client_name'];
             $data_upload['ext'] = $data['file_ext'];
             $data_upload['size'] = $data['file_size'];
@@ -74,8 +77,8 @@ class Upload extends MY_Controller {
             $data_upload['type'] = $data['image_type'];
             $data_upload['url'] = $data['orig_name'];
             $data_upload['path'] = $data['full_path'];
-            $data_upload['thumbnail_url'] = $data['full_path'];
-            $this->mproduct->insertProductImg($data_upload);
+            $data_upload['thumbnail_url'] = $upload_path_url . 'thumbs/' . $data['file_name'];
+            $this->mproduct->editProductImg($data_upload, $image_id);
             // this is why we put this in the constants to pass only json data
             if (IS_AJAX) {
                 echo json_encode(array("files" => $files));

@@ -20,10 +20,15 @@ class Dashboard extends MY_Controller {
         $data['title'] = "Dashboard Admin";
         $data['productDraft'] = $this->mproduct->getProductDraft();
         if (! $data['productDraft']) {
-            $data_draft['name'] = 'draft';
-            $insert_id = $this->mproduct->insertQuickProduct($data_draft);
-            $data['productDraft'] = $this->mproduct->getLatestProductDraft($insert_id);
+            $dataDraft['name'] = 'draft';
+            $insertProductId = $this->mproduct->insertQuickProduct($dataDraft);
+            $dataImgDraft['product_id'] = $insertProductId;
+            $dataImgDraft['name'] = 'draft';
+            $insertProductImageId = $this->mproduct->insertQuickProductImg($dataImgDraft);
+            $data['productDraft'] = $this->mproduct->getLatestProductDraft($insertProductId);
+            $data['productImgDraft'] = $this->mproduct->getLatestProductImgDraft($insertProductId);
         }
+        $data['productImgDraft'] = $this->mproduct->getProductImgDraft($data['productDraft']->product_id);
         $data['categories'] = $this->mcategory->getAllCategories();
         $this->load->admin_template('admin/dashboard', $data);
     }
