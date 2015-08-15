@@ -5,21 +5,38 @@
  *      This is a dashboard js for insert quick product and some basic report
  **/
 
-function createNewDraft(){
-	$.ajax({
-		method : "POST",
-		url : site_url + "admin/dashboard/insert_draft_product",
-	// On Done Insert New Product
-	}).done(function(msg) {
-		console.log("Product Draft Created: " + msg);
-		var data = JSON.parse(msg);
-		console.log('product_id' + data.product_id);
-		$('#product_id').val(data.product_id);
-		$('#image_id').val(data.image_id);
-//		alert(d.customer.first_name);
-	})
-}
+var product_id = $('#product_id').val();
+var image_id = $('#image_id').val();
 
+function changeUrl(product_id,image_id){
+	if (history.pushState) {
+	    var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?product_id='+ product_id + '&image_id='+ image_id;
+	    window.history.pushState({path:newurl},'',newurl);
+	}
+}
+changeUrl(product_id,image_id);
+
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+
+var prod_id_url = getUrlParameter('product_id');
+var img_id_url = getUrlParameter('image_id');
+
+var url_upload = site_url + "upload/do_upload/" + prod_id_url + "/" + img_id_url;
+console.log('top log =' + url_upload);
+	
 $(function() {
 	$('#submit').click(
 			function() {
@@ -42,7 +59,19 @@ $(function() {
 					data : product_data
 				// On Done Insert New Product
 				}).done(function(msg) {
+					$(':input', '#quick-product-box').not(':button, :submit, :reset')
+					.val('').removeAttr('checked').removeAttr('selected');
 					console.log("Product Created: " + msg);
+					console.log("Product Draft Created: " + msg);
+					var data = JSON.parse(msg);
+					console.log('product_id' + data.product_id);
+					$('#product_id').val(data.product_id);
+					$('#image_id').val(data.image_id);
+					product_id = data.product_id;
+					image_id = data.image_id;
+					url_upload = site_url + "upload/do_upload/" + data.product_id + "/" + data.image_id;
+					console.log('after insert='+url_upload);
+					changeUrl(data.product_id,data.image_id);
 					$('#quick-product-box').block({
 						message : '<h2>Successfully Created </h2>' +
 						// '<p>' + msg + '</p>' +
@@ -62,17 +91,19 @@ $(function() {
 					}, 1500);
 					$('#files').empty();
 					$(".progress-bar").css("width", "0%");
-					createNewDraft();
 				}).always(
 						function() {
-							$(':input', '#quick-product-box').not(':button, :submit, :reset')
-							.val('').removeAttr('checked').removeAttr('selected');
 //							$('#files').remove();
 							// $('#description').editor.clear();
 							// $("input[name='_wysihtml5_mode']").val('');
 							// $('#description').data("wysihtml5").editor.clear();
 						});
 			});
+
+	
+	
+	
+	
 	// data.push({name: 'wordlist', value: wordlist});
 	// good one but cannot use for on done
 	// $.post(site_url + "admin/dashboard/insert_quick_product",

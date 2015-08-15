@@ -39,6 +39,8 @@ class MProduct extends CI_Model {
     }
     
     function getLatestProductImgDraft($id) {
+        $this->db->order_by('image_id', "desc");
+        $this->db->limit(1);
         $query = $this->db->get_where('product_image', array('product_id' => $id));
         return checkRow($query);
     }
@@ -104,6 +106,7 @@ class MProduct extends CI_Model {
     function editProductImg($data, $id) {
         unset($data['image_id']);
         $query = $this->db->update('product_image', $data, array('image_id' => $id));
+        fire($this->db->last_query());
         return $query;
     }
 

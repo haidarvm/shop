@@ -39,7 +39,8 @@ class Dashboard extends MY_Controller {
         // print_r($post);
         $post['slug'] = $this->checkSlug($post['name']);
         $this->mproduct->editProduct($post, $post['product_id']);
-        echo json_encode($post);
+        // echo json_encode($post);
+        $this->insert_draft_product();
     }
 
     public function insert_draft_product() {

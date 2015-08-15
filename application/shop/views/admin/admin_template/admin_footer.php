@@ -187,6 +187,7 @@
     <!-- BlockUI.js UI For Blocking -->
     <script src="<?php echo base_url();?>assets/js/jquery.blockUI.js"></script>
     <!-- For Main Shop JS -->
+    <script src="<?php echo base_url();?>assets/js/dashboard.js"></script>
     <script src="<?php echo base_url();?>assets/js/shop.js"></script>
     <!-- Morris.js charts -->
     <script src="<?php echo base_url();?>assets/js/raphael-min.js"></script>
@@ -220,6 +221,5 @@
     <!-- AdminLTE for demo purposes -->
     <script src="<?php echo base_url();?>assets/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="<?php echo base_url();?>assets/js/dashboard.js"></script>
   </body>
 </html>
