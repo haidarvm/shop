@@ -31,6 +31,11 @@ class Product extends MY_Controller {
         $this->load->admin_template('admin/product', $data);
     }
 
+    public function blank(){
+        $data['title'] = "Admin Blank";
+        $this->load->admin_template('admin/blank', $data);
+    }
+    
     public function insert_quick_product() {
         $post = $this->input->post();
         unset($post['_wysihtml5_mode']);

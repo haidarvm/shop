@@ -4,8 +4,8 @@
 		<!-- Sidebar user panel -->
 		<div class="user-panel">
 			<div class="pull-left image">
-				<img src="<?php echo base_url();?>assets/img/user2-160x160.jpg" class="img-circle"
-					alt="User Image">
+				<img src="<?php echo base_url();?>assets/img/user2-160x160.jpg"
+					class="img-circle" alt="User Image">
 			</div>
 			<div class="pull-left info">
 				<p>haidarvm</p>
@@ -28,17 +28,17 @@
 		<!-- sidebar menu: : style can be found in sidebar.less -->
 		<ul class="sidebar-menu">
 			<li class="header">MAIN NAVIGATION</li>
-			<li class="active treeview"><a href="#"> <i class="fa fa-dashboard"></i>
-					<span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
-			</a>
+			<li class="active treeview"><a href="<?php echo site_url()?>admin/"> <i class="fa fa-dashboard"></i>
+					<span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i></a>
 				<ul class="treeview-menu">
-					<li class="active"><a href="index.html"><i class="fa fa-circle-o"></i>
+					<li class="active"><a href="<?php echo site_url()?>admin/"><i class="fa fa-circle-o"></i>
 							Dashboard v1</a></li>
-					<li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard
-							v2</a></li>
+					<li><a href="<?php echo site_url()?>admin/dashboard/other"><i
+							class="fa fa-circle-o"></i> Dashboard v2</a></li>
 				</ul></li>
-			<li><a href="<?php echo site_url()?>admin/product"><i class="fa fa-cubes"></i><span> Product</span></a></li>
-			<li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+			<li><a href="<?php echo site_url()?>admin/product"><i
+					class="fa fa-cubes"></i><span> Product</span></a></li>
+			<!-- <li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li> -->
 		</ul>
 	</section>
 	<!-- /.sidebar -->

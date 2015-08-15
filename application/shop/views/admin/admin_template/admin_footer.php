@@ -204,17 +204,19 @@
     <script src="<?php echo base_url();?>assets/js/daterangepicker.js"></script>
     <!-- datepicker -->
     <script src="<?php echo base_url();?>assets/js/bootstrap-datepicker.js"></script>
+    <!-- ChartJS 1.0.1 -->
+    <script src="<?php echo base_url();?>assets/js/Chart.min.js"></script>
     <!-- Bootstrap WYSIHTML5
     <script src="<?php echo base_url();?>assets/js/bootstrap3-wysihtml5.all.min.js"></script> -->
+    <script src="<?php echo base_url();?>assets/js/dashboard<?php echo $version?>.js"></script>
+    <?php endif;?>
     <!-- Slimscroll -->
     <script src="<?php echo base_url();?>assets/js/jquery.slimscroll.min.js"></script>
     <!-- FastClick -->
     <script src="<?php echo base_url();?>assets/js/fastclick.min.js"></script>
     <!-- AdminLTE App -->
     <script src="<?php echo base_url();?>assets/js/app.min.js"></script>
-    <script src="<?php echo base_url();?>assets/js/dashboard.js"></script>
     <script src="<?php echo base_url();?>assets/js/demo.js"></script>
-    <?php endif;?>
     <!-- For Upload Only  -->
 	<script src="<?php echo base_url();?>assets/js/load-image.all.min.js"></script>
 	<script src="<?php echo base_url();?>assets/js/jquery.fileupload.js"></script>

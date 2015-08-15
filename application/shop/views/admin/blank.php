@@ -16,87 +16,22 @@
         <!-- Main content -->
         <section class="content">
 
-          <!-- Quick New Product -->
-				<div class="box box-info" id="quick-product-box">
-					<div class="box-header">
-						<i class="fa fa-envelope"></i>
-						<h3 class="box-title">Quick New Product</h3>
-						<!-- tools box -->
-						<div class="pull-right box-tools">
-							<button class="btn btn-info btn-sm" data-toggle="tooltip" title="Add More">
-								<i class="fa fa-plus"></i>
-							</button>
-						</div>
-						<!-- /. tools -->
-					</div>
-					<div class="box-body">
-						<form action="#" class="form-horizontal" id="quick-product" method="post">
-							<div class="form-group">
-								<label class="col-sm-2 control-label" for="name">Product</label>
-								<div class="col-sm-10">
-									<input id="name" name="name" class="form-control" type="text" placeholder="Name">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-sm-2 control-label" for="name">Category</label>
-								<div class="col-sm-10">
-									<select name="category_id" class="form-control">
-									<?php foreach($categories as $cat) {?>
-										<option value="<?php echo $cat->category_id;?>"><?php echo $cat->name;?></option>
-									<?php }?>
-									</select>
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-sm-2 control-label" for="name">Price</label>
-								<div class="col-sm-10">
-									<input id="name" name="price" class="form-control numbers" type="text" placeholder="Rp">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-sm-2 control-label" for="name">Description</label>
-								<div class="col-sm-10">
-									<textarea name="description" class="textarea" placeholder="Description" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-sm-2 control-label" for="name">Stock</label>
-								<div class="col-sm-10">
-									<input id="name" name="stock" class="form-control number" type="text" placeholder="Qty">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-sm-2 control-label" for="image">Image</label>
-								<div class="col-sm-10">
-    								<span class="btn btn-success fileinput-button">
-                                        <i class="glyphicon glyphicon-plus"></i>
-                                        <span>Add files...</span>
-                                        <!-- The file input field used as target for the file upload widget -->
-                                        <input id="fileupload" type="file" name="userfile" multiple>
-                                        <input type="hidden" name="product_id" id="product_id" value="<?php echo !empty($productDraft) ? $productDraft->product_id : "";?>">
-                                        <input type="hidden" name="image_id" id="image_id" value="<?php echo !empty($productImgDraft) ? $productImgDraft->image_id : "";?>">
-                                    </span>
-                                </div>
-							</div>
-							<div class="form-group">
-								<label class="col-sm-2 control-label" for="image">Progress</label>
-								<div class="col-sm-10">
-    								<!-- The global progress bar -->
-                                    <div id="progress" class="progress">
-                                        <div class="progress-bar progress-bar-success"></div>
-                                    </div>
-                                    <!-- The container for the uploaded files -->
-                                    <div id="files" class="files"></div>
-                                </div>
-							</div>
-						</form>
-					</div>
-					<div class="box-footer clearfix">
-						<button class="pull-right btn btn-default" id="submit">
-							Submit <i class="fa fa-arrow-circle-right"></i>
-						</button>
-					</div>
-				</div>
+          <!-- Default box -->
+          <div class="box">
+            <div class="box-header with-border">
+              <h3 class="box-title">Title</h3>
+              <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+                <button class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              Start creating your amazing application!
+            </div><!-- /.box-body -->
+            <div class="box-footer">
+              Footer
+            </div><!-- /.box-footer-->
+          </div><!-- /.box -->
 
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->

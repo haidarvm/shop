@@ -19,6 +19,7 @@ class Dashboard extends MY_Controller {
     public function home() {
         $data['title'] = "Dashboard Admin";
         $data['chart'] = true;
+        $data['version'] = null;
         $data['productDraft'] = $this->mproduct->getProductDraft();
         if (! $data['productDraft']) {
             $dataDraft['name'] = 'draft';
@@ -64,6 +65,14 @@ class Dashboard extends MY_Controller {
         } else {
             return $slugify;
         }
+    }
+    
+    public function other(){
+        $data['title'] = "None";
+        $data['version'] = 2;
+        $data['chart'] = true;
+        $this->load->admin_template('admin/dashboard2', $data);
+        
     }
 
 }
