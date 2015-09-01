@@ -28,6 +28,7 @@ class Product extends MY_Controller {
         }
         $data['productImgDraft'] = $this->mproduct->getProductImgDraft($data['productDraft']->product_id);
         $data['categories'] = $this->mcategory->getAllCategories();
+        $data['units'] = $this->mcategory->getAllUnit();
         $this->load->admin_template('admin/product', $data);
     }
 
@@ -41,8 +42,9 @@ class Product extends MY_Controller {
         unset($post['_wysihtml5_mode']);
         // print_r($post);
         $post['slug'] = $this->checkSlug($post['name']);
+        $post['price_id'] = $this->mproduct->insertProductPrice($post);
         $this->mproduct->editProduct($post, $post['product_id']);
-        // echo json_encode($post);
+        //echo json_encode($post);
         $this->insert_draft_product();
     }
 
@@ -56,6 +58,16 @@ class Product extends MY_Controller {
         $data['product_id'] = $product_id;
         $data['image_id'] = null;
         echo json_encode($data);
+    }
+    
+    public function checkSlug($slug) {
+        $slugify = slugify($slug);
+        $checkSlug = $this->mproduct->checkSlug($slug);
+        if ($checkSlug) {
+            return $checkSlug;
+        } else {
+            return $slugify;
+        }
     }
 
 }

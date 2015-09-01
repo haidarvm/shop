@@ -8,13 +8,17 @@ class MUser extends CI_Model {
     function __construct() {
         parent::__construct();
     }
-    
+
     function getAllProduct() {
-        
+
     }
-    
+
     function getAllCategories() {
-        
+
     }
-    
+
+    function insertUser($data) {
+      $this->db->insert("user",$data);
+    }
+
 }

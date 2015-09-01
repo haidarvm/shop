@@ -177,7 +177,7 @@
 						</form>
 					</div>
 					<div class="box-footer clearfix">
-						<button class="pull-right btn btn-default" id="submit">
+						<button class="pull-right btn btn-default" id="submit-product">
 							Submit <i class="fa fa-arrow-circle-right"></i>
 						</button>
 					</div>

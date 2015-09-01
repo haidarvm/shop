@@ -25,6 +25,17 @@ class MCategory extends CI_Model {
     }
 
     function getAllProduct() {
+		
     }
+    
+    function getAllUnit() {
+		$query = $this->db->get('unit');
+		return checkRes($query);
+	}
+    
+    function insertUnit($data) {
+		$query = $this->db->insert('unit', $data);
+		return $this->db->insert_id();
+	}
 
 }

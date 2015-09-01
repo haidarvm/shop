@@ -54,6 +54,16 @@
 								</div>
 							</div>
 							<div class="form-group">
+								<label class="col-sm-2 control-label" for="name">Unit</label>
+								<div class="col-sm-10">
+									<select name="unit_id" class="form-control">
+									<?php foreach($units as $unit) {?>
+										<option value="<?php echo $unit->unit_id;?>"><?php echo $unit->name;?></option>
+									<?php }?>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
 								<label class="col-sm-2 control-label" for="name">Description</label>
 								<div class="col-sm-10">
 									<textarea name="description" class="textarea" placeholder="Description" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
@@ -92,7 +102,7 @@
 						</form>
 					</div>
 					<div class="box-footer clearfix">
-						<button class="pull-right btn btn-default" id="submit">
+						<button class="pull-right btn btn-default" id="submit-product">
 							Submit <i class="fa fa-arrow-circle-right"></i>
 						</button>
 					</div>

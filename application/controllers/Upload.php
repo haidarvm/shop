@@ -51,8 +51,8 @@ class Upload extends MY_Controller {
             $config['new_image'] = $data['file_path'] . 'thumbs/';
             $config['maintain_ratio'] = TRUE;
             $config['thumb_marker'] = '';
-            $config['width'] = 300;
-            $config['height'] = 300;
+            $config['width'] = 85;
+            $config['height'] = 85;
             $this->load->library('image_lib', $config);
             $this->image_lib->resize();
             // print_r($config);

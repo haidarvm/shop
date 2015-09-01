@@ -40,7 +40,7 @@ var url_upload = site_url + "upload/do_upload/" + product_id + "/" + image_id;
 console.log('top log =' + url_upload);
 
 $(function() {
-	$('#submit').click(
+	$('#submit-product').click(
 			function() {
 				$('#quick-product-box').block({
 					message : '<h1>Processing</h1>',
@@ -57,7 +57,7 @@ $(function() {
 				var product_data = $('#quick-product').serializeArray();
 				$.ajax({
 					method : "POST",
-					url : site_url + "admin/dashboard/insert_quick_product",
+					url : site_url + "admin/product/insert_quick_product",
 					data : product_data
 				// On Done Insert New Product
 				}).done(

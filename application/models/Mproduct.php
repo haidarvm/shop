@@ -99,11 +99,23 @@ class MProduct extends CI_Model {
         $query = $this->db->insert('product_image', $data);
         return $this->db->insert_id();
     }
+    
+    function insertProductPrice($data) {
+        $data_price['price'] = $data['price'];
+        $data_price['unit_id'] = $data['unit_id'];
+        $data_price['product_id'] = $data['product_id'];
+        $data_price['status'] = 1;
+        $data_price['description'] = "Product Pertama";
+        $data_price['price'] = numberOnly($data['price']);
+        $query = $this->db->insert('product_price', $data_price);
+        return $this->db->insert_id();
+    }
 
     function editProduct($data, $id) {
         unset($data['product_id']);
         unset($data['image_id']);
-        $data['price'] = numberOnly($data['price']);
+        unset($data['price']);
+        unset($data['unit_id']);
         $query = $this->db->update('product', $data, array('product_id' => $id));
         return $query;
     }

@@ -35,38 +35,6 @@ class Dashboard extends MY_Controller {
         $this->load->admin_template('admin/dashboard', $data);
     }
 
-    public function insert_quick_product() {
-        $post = $this->input->post();
-        unset($post['_wysihtml5_mode']);
-        // print_r($post);
-        $post['slug'] = $this->checkSlug($post['name']);
-        $this->mproduct->editProduct($post, $post['product_id']);
-        // echo json_encode($post);
-        $this->insert_draft_product();
-    }
-
-    public function insert_draft_product() {
-        $post = $this->input->post();
-        $dataDraft['name'] = 'draft';
-        $product_id = $this->mproduct->insertQuickProduct($dataDraft);
-        $dataImgDraft['product_id'] = $product_id;
-        $dataImgDraft['name'] = 'draft';
-        // $image_id = $this->mproduct->insertQuickProductImg($dataImgDraft);
-        $data['product_id'] = $product_id;
-        $data['image_id'] = null;
-        echo json_encode($data);
-    }
-
-    public function checkSlug($slug) {
-        $slugify = slugify($slug);
-        $checkSlug = $this->mproduct->checkSlug($slug);
-        if ($checkSlug) {
-            return $checkSlug;
-        } else {
-            return $slugify;
-        }
-    }
-    
     public function other(){
         $data['title'] = "None";
         $data['version'] = 2;
