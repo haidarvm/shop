@@ -14,16 +14,17 @@ class User extends CI_Controller {
 		$this->get_all();
 	}
 
-  public function get_all() {
-    echo 'all';
-  }
-  public function insert() {
-    $postdata = file_get_contents("php://input");
+	public function get_all() {
+		echo 'all';
+	}
+
+	public function insert() {
+		$postdata = file_get_contents("php://input");
 		if (isset($postdata)) {
-      print_r($postdata);
+			print_r($postdata);
 			$data = json_decode($postdata);
-		  echo $data->username;
-      echo  $data->address;
-    }
-  }
+			$data['username'] = $data->username;
+			$data['address'] = $data->address;
+		}
+	}
 }
