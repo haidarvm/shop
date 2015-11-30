@@ -1,0 +1,252 @@
+h6 {
+	font-weight: bold;
+}
+
+.clear {
+	clear: both;
+}
+
+.header {
+	text-align: center;
+}
+
+.content {
+	margin-top: 2rem;
+}
+
+.bordertop {
+	border-top: 2px solid grey;
+}
+
+.borderbottom {
+	border-bottom: 2px solid grey;
+}
+
+.gmbproduk {
+	width: 100%;
+	height: auto;
+}
+
+.gmbprodukc {
+	width: 50%;
+	height: auto;
+	float: left;
+}
+
+.hoverproduk {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 99;
+	display: none;
+	text-align: center;
+	width: 100%;
+	height: 98%;
+	margin: 0;
+	background: #000;
+	opacity: 0.5;
+	color: #FFF;
+	padding: 0;
+}
+
+.barang {
+	position: absolute;
+	opacity: 0.7;
+	left: 0px;
+	top: 0px;
+	z-index: 9;
+	margin: 0;
+	padding: 0;
+}
+
+.overdiv {
+	overflow: hidden;
+}
+
+.kontentab {
+	float: left;
+	width: 100%;
+	height: auto;
+	background: grey;
+}
+
+.tabu {
+	display: none;
+}
+
+.tutup {
+	cursor: pointer;
+	padding: 5px 0;
+	float: right;
+}
+
+.tutup:hover {
+	color: red;
+}
+
+.kiri {
+	text-align: left;
+}
+
+.kanan {
+	text-align: right;
+}
+
+.produk {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+img:hover {
+	opacity: 0.7;
+}
+
+.headacc {
+	display: block;
+	cursor: pointer;
+	position: relative;
+	margin: 2px 0px 0px;
+	padding: 0.5em 0.5em 0.5em 0em;
+	min-height: 0px;
+	font-size: 100%;
+	border-bottom: 2px solid #b9b9b9;
+	text-align: left;
+}
+
+.headacc:hover {
+	color: #c40000;
+}
+
+.conacc {
+	display: block;
+	height: auto !important;
+	padding: 1px;
+	border-top: 0px none;
+	border-bottom: 1px solid #b9b9b9;
+	text-align: left;
+}
+
+.hpnam {
+	position: relative;
+	top: 35%;
+}
+
+.hpnamv {
+	position: relative;
+	top: 40%;
+}
+
+.hpnam img, .hpnamv img {
+	width: 100%;
+}
+
+.hov p {
+	display: none;
+}
+
+.infotop {
+	text-align: center;
+	width: 65%;
+	margin: 0 auto;
+}
+
+.butq {
+	width: 15px;
+	margin: 0 5px;
+}
+
+.cari {
+	float: right;
+	cursor: pointer;
+}
+
+.cSearch {
+	display: none;
+	position: absolute;
+	z-index: 99;
+	top: -50px;
+	right: 0;
+	text-align: right;
+}
+
+.hide {
+	display: none;
+}
+
+.prod-next-row {
+	margin-left: 0 !important;
+	margin-top: 4%;
+}
+
+.pagination {
+	height: @baseLineHeight* 2;
+	margin: @baseLineHeight 0;
+}
+
+.pagination ul {
+	display: inline-block; . ie7-inline-block ();
+	margin-left: 0;
+	margin-bottom: 0;
+	.
+	border-radius
+	(3px);
+	.
+	box-shadow
+	(0
+	1px
+	2px
+	rgba(0,0,0,.05));
+}
+
+.pagination li {
+	display: inline;
+}
+
+.pagination a {
+	float: left;
+	padding: 0 14px;
+	line-height: (@baseLineHeight* 2)- 2;
+	text-decoration: none;
+	border: 1px solid@grayLight;
+	border-left-width: 0;
+}
+
+.pagination a:hover, .pagination .active a {
+	background-color: @grayLighter;
+}
+
+.pagination .active a {
+	color: @gray;
+	cursor: default;
+}
+
+.pagination .disabled a, .pagination .disabled a:hover {
+	color: @gray;
+	background-color: transparent;
+	cursor: default;
+}
+
+.pagination li:first-child a {
+	border-left-width: 1px;
+	.
+	border-radius
+	(3px
+	0
+	0
+	3px);
+}
+
+.pagination li:last-child a { .border-radius (0 3px 3px 0);
+	
+}
+
+//
+Centered
+.pagination-centered {
+	text-align: center;
+}
+
+.pagination-right {
+	text-align: right;
+}

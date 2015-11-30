@@ -36,8 +36,13 @@
 					<li><a href="<?php echo site_url()?>admin/dashboard/other"><i
 							class="fa fa-circle-o"></i> Dashboard v2</a></li>
 				</ul></li>
-			<li><a href="<?php echo site_url()?>admin/product"><i
-					class="fa fa-cubes"></i><span> Product</span></a></li>
+			<li><a href="<?php echo site_url()?>admin/product/list"><i class="fa fa-cubes"></i><span> List Product</span></a></li>
+			<li><a href="<?php echo site_url()?>admin/user/list"><i class="fa fa-cubes"></i><span> List User</span></a></li>
+			<li><a href="<?php echo site_url()?>admin/product/insert"><i class="fa fa-edit"></i><span> New Product</span></a></li>
+			<li><a href="<?php echo site_url()?>admin/order/get_all_draft"><i class="fa fa-files-o"></i><span> Draft Order</span></a></li>
+			<li><a href="<?php echo site_url()?>admin/order"><i class="fa fa-files-o"></i><span> New Order</span></a></li>
+			<li><a href="<?php echo site_url()?>admin/order/get_all_done"><i class="fa fa-files-o"></i><span> History Transaction</span></a></li>
+			<li><a href="<?php echo site_url()?>admin/category"><i class="fa fa-files-o"></i><span> Category</span></a></li>
 			<!-- <li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li> -->
 		</ul>
 	</section>

@@ -17,4 +17,8 @@ class MCart extends CI_Model {
         return true;
     }
     
+    function insert() {
+        
+    }
+    
 }

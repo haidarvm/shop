@@ -9,11 +9,11 @@ class Upload extends MY_Controller {
         $this->load->model('mproduct');
         $this->mproduct = new MProduct();
     }
-
+    
     public function do_upload($product_id) {
-        $upload_path_url = base_url() . 'assets/files/';
-        
-        $config['upload_path'] = FCPATH . 'assets/files/';
+        $upload_path_url = base_url() . 'assets/product/';
+        //echo $upload_path_url;
+        $config['upload_path'] = FCPATH . 'assets/product/';
         $dataDraftImg['product_id'] = $product_id;
         $dataDraftImg['name'] = 'draft';
         // echo 'prod from upload ='.$product_id.'<br>';
@@ -34,7 +34,7 @@ class Upload extends MY_Controller {
                     $foundFiles[$f]['name'] = $fileName;
                     $foundFiles[$f]['size'] = $info['size'];
                     $foundFiles[$f]['url'] = $upload_path_url . $fileName;
-                    $foundFiles[$f]['thumbnailUrl'] = $upload_path_url . 'thumbs/' . $fileName;
+                    $foundFiles[$f]['thumbnailUrl'] = $upload_path_url  . $fileName;
                     $foundFiles[$f]['deleteUrl'] = base_url() . 'upload/deleteImage/' . $fileName;
                     $foundFiles[$f]['deleteType'] = 'DELETE';
                     $foundFiles[$f]['error'] = null;
@@ -44,17 +44,8 @@ class Upload extends MY_Controller {
             $this->output->set_content_type('application/json')->set_output(json_encode(array('files' => $foundFiles)));
         } else {
             $data = $this->upload->data();
-            $config = array();
-            $config['image_library'] = 'gd2';
-            $config['source_image'] = $data['full_path'];
-            $config['create_thumb'] = TRUE;
-            $config['new_image'] = $data['file_path'] . 'thumbs/';
-            $config['maintain_ratio'] = TRUE;
-            $config['thumb_marker'] = '';
-            $config['width'] = 300;
-            $config['height'] = 300;
-            $this->load->library('image_lib', $config);
-            $this->image_lib->resize();
+            $this->insert_batch($product_id, $data['full_path'],$image_id);
+            deleteFiles($data['full_path']);
             // print_r($config);
             // set the data for the json array
             $info = new StdClass();
@@ -63,7 +54,7 @@ class Upload extends MY_Controller {
             $info->type = $data['file_type'];
             $info->url = $upload_path_url . $data['file_name'];
             // I set this to original file since I did not create thumbs. change to thumbnail directory if you do = $upload_path_url .'/thumbs' .$data['file_name']
-            $info->thumbnailUrl = $upload_path_url . 'thumbs/' . $data['file_name'];
+//             $info->thumbnailUrl = $upload_path_url . 'thumb/' . $data['file_name'];
             $info->deleteUrl = base_url() . 'upload/deleteImage/' . $data['file_name'];
             $info->deleteType = 'DELETE';
             $info->error = null;
@@ -72,14 +63,14 @@ class Upload extends MY_Controller {
             $files[] = $info;
             $data_upload['image_id'] = $image_id;
             $data_upload['name'] = $data['client_name'];
-            $data_upload['ext'] = $data['file_ext'];
+            $data_upload['ext'] = strtolower($data['file_ext']);
             $data_upload['size'] = $data['file_size'];
             $data_upload['width'] = $data['image_width'];
             $data_upload['height'] = $data['image_height'];
             $data_upload['type'] = $data['image_type'];
             $data_upload['url'] = $data['orig_name'];
             $data_upload['path'] = $data['full_path'];
-            $data_upload['thumbnail_url'] = $upload_path_url . 'thumbs/' . $data['file_name'];
+//             $data_upload['thumbnail_url'] = $upload_path_url . 'thumb/' . $data['file_name'];
             $this->mproduct->editProductImg($data_upload, $image_id);
             // this is why we put this in the constants to pass only json data
             if (IS_AJAX) {
@@ -97,7 +88,7 @@ class Upload extends MY_Controller {
 
     public function deleteImage($file) { // gets the job done but you might want to add error checking and security
         $success = unlink(FCPATH . 'assets/files/' . $file);
-        $success = unlink(FCPATH . 'assets/files/thumbs/' . $file);
+        $success = unlink(FCPATH . 'assets/files/thumb/' . $file);
         // info to see if it is doing what it is supposed to
         $info = new StdClass();
         $info->sucess = $success;
@@ -128,6 +119,49 @@ class Upload extends MY_Controller {
             $data = array('upload_data' => $this->upload->data());
             $this->load->view('admin/product_success', $data);
         }
+    }
+    
+    /** To generate Resize into 3 image
+     * Execute by insert_multi()
+     *
+     * @param int $product_id
+     * @param file path $ori_file
+     */
+    public function insert_batch($product_id, $ori_file, $image_id) {
+        $info = getimagesize($ori_file);
+        $filesize = filesize($ori_file);
+        $extension = pathinfo($ori_file, PATHINFO_EXTENSION);
+        $type = image_type_to_extension($info[2]);
+        list ($width, $height) = getimagesize($ori_file);
+        if ($product_id) {
+            $data_img['product_id'] = $product_id;
+            $data_img['name'] = clearName(basename($ori_file));
+            $data_img['full_name'] = basename($ori_file);
+            $data_img['path'] = $ori_file;
+            $data_img['width'] = $width;
+            $data_img['height'] = $height;
+            $data_img['ext'] = $extension;
+            $data_img['type'] = $type;
+            $data_img['size'] = $filesize;
+            $this->resize_all($ori_file, $image_id . '.' . $extension);
+        }
+    }
+    
+    /** Resize All into 3 img original, small and thumbnail
+     * @param unknown $ori
+     * @param unknown $new
+     */
+    public function resize_all($ori, $new) {
+        $this->load->library('image_lib');
+        $config['image_library'] = 'gd2';
+        $config['source_image'] = $ori;
+        $config['create_thumb'] = false;
+        $config['file_permissions'] = 0777;
+        $config['maintain_ratio'] = TRUE;
+        list ($width, $height) = getimagesize($config['source_image']);
+        $this->mproduct->resize_all($config, $new, min_percent($width, 10), min_percent($height, 10), 85, $type = "ori");
+        $this->mproduct->resize_all($config, $new, 460, 460, 85, $type = "small");
+        $this->mproduct->resize_all($config, $new, 200, 200, 85, $type = "thumb");
     }
 
 }

@@ -50,14 +50,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
-$route['product/(:any)'] = 'shop/product/product/$1';
-$route['products'] = 'shop/product/products/';
-
-$route['category/(:any)'] = 'shop/category/category/$1';
-$route['categories'] = 'shop/category/categories/';
 
 $route['upload'] = 'upload/do_upload';
 
+$route['product/(:any)'] = 'product/cat/$1';
+$route['admin/product/list'] = 'admin/product/product_list';
+$route['admin/product/list/(:num)'] = 'admin/product/product_list/$1';
+$route['admin/product/list/(:any)'] = 'admin/product/product_list/$1';
+$route['admin/product/list/(:any)/(:any)'] = 'admin/product/product_list/$1/$2';
+$route['admin/category/list'] = 'admin/category/category_list';
+$route['admin/user/list'] = 'admin/user/user_list';
+$route['cart/list'] = 'cart/cart_list';
+#$route['cart/'] = 'basket/';
 $route['admin'] = 'admin/dashboard/home';
 $route['dashboard'] = 'admin/dashboard/home';
 

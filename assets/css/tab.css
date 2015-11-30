@@ -1,0 +1,18 @@
+.tab_link {
+	text-decoration: none;
+}
+
+.tab_link  img {
+	width: 100%;
+}
+
+.tab_link_selected {
+	color: #2d9827;
+} /* just a different tab link bg color when it's selected */
+.tab_text {
+	display: none;
+}
+
+.closetab {
+	cursor: pointer;
+}

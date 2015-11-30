@@ -127,7 +127,7 @@
 								<div class="col-sm-10">
 									<select name="category_id" class="form-control">
 									<?php foreach($categories as $cat) {?>
-										<option value="<?php echo $cat->category_id;?>"><?php echo $cat->name;?></option>
+										<option value="<?php echo $cat->category_id;?>"><?php echo $cat->category_name;?></option>
 									<?php }?>
 									</select>
 								</div>
@@ -177,7 +177,7 @@
 						</form>
 					</div>
 					<div class="box-footer clearfix">
-						<button class="pull-right btn btn-default" id="submit">
+						<button class="pull-right btn btn-default" id="submit-product">
 							Submit <i class="fa fa-arrow-circle-right"></i>
 						</button>
 					</div>

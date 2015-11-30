@@ -30,11 +30,15 @@
 						<!-- /. tools -->
 					</div>
 					<div class="box-body">
+                         <?php if($action=='add') {?>
 						<form action="#" class="form-horizontal" id="quick-product" method="post">
+						<?php } else {?>
+						<form action="<?php echo site_url();?>admin/product/update/<?php echo !empty($product) ? $product->product_id : "";?>" class="form-horizontal"  method="post">
+						<?php  } ?>
 							<div class="form-group">
 								<label class="col-sm-2 control-label" for="name">Product</label>
 								<div class="col-sm-10">
-									<input id="name" name="name" class="form-control" type="text" placeholder="Name">
+									<input id="name" name="name" class="form-control" value="<?php echo isset($product) ? $product->name : '';?>" type="text" placeholder="Name">
 								</div>
 							</div>
 							<div class="form-group">
@@ -42,29 +46,64 @@
 								<div class="col-sm-10">
 									<select name="category_id" class="form-control">
 									<?php foreach($categories as $cat) {?>
-										<option value="<?php echo $cat->category_id;?>"><?php echo $cat->name;?></option>
+										<option value="<?php echo $cat->category_id;?>"><?php echo $cat->category_name;?></option>
 									<?php }?>
 									</select>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-2 control-label" for="name">Price</label>
+								<label class="col-sm-2 control-label" for="name">Indo Price</label>
 								<div class="col-sm-10">
-									<input id="name" name="price" class="form-control numbers" type="text" placeholder="Rp">
+									<input id="name" name="price" class="form-control numbers" value="<?php echo isset($product) ? $product->price : '';?>" type="text" placeholder="Rp">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-2 control-label" for="name">Description</label>
+								<label class="col-sm-2 control-label" for="name">English Price</label>
 								<div class="col-sm-10">
-									<textarea name="description" class="textarea" placeholder="Description" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+									<input id="name" name="price_en" class="form-control numbers" value="<?php echo isset($product) ? $product->price_en : '';?>" type="text" placeholder="USD">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label" for="name">Unit</label>
+								<div class="col-sm-10">
+									<select name="unit_id" class="form-control">
+									<?php foreach($units as $unit) {?>
+										<option value="<?php echo $unit->unit_id;?>"><?php echo $unit->name;?></option>
+									<?php }?>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label" for="name">Indo Description</label>
+								<div class="col-sm-10">
+									<textarea name="description" class="textarea" placeholder="Indo Description" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?php echo isset($product) ? $product->description : '';?></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label" for="name">English Description</label>
+								<div class="col-sm-10">
+									<textarea name="description_en" class="textarea" placeholder="English Description" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?php echo isset($product) ? $product->description_en : '';?></textarea>
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-sm-2 control-label" for="name">Stock</label>
 								<div class="col-sm-10">
-									<input id="name" name="stock" class="form-control number" type="text" placeholder="Qty">
+									<input id="stock" name="stock" class="form-control number" type="text" value="10" placeholder="Qty">
 								</div>
 							</div>
+							
+							<?php 
+							if(!empty($getAllProductImg) && $action=='update') {
+							foreach($getAllProductImg as $proudctImg) {?>
+							<div class="form-group">
+								<label class="col-sm-2 control-label" for="name">Image</label>
+								<div class="col-sm-10">
+								<?php echo !empty($proudctImg->path) ?  '<img src="'.prod_thumb_url().$proudctImg->image_id.$proudctImg->ext.'" />' : "No Image" ?>
+								
+								</div>
+							</div>
+							<?php }
+							}?>
 							<div class="form-group">
 								<label class="col-sm-2 control-label" for="image">Image</label>
 								<div class="col-sm-10">
@@ -72,9 +111,15 @@
                                         <i class="glyphicon glyphicon-plus"></i>
                                         <span>Add files...</span>
                                         <!-- The file input field used as target for the file upload widget -->
-                                        <input id="fileupload" type="file" name="userfile" multiple>
+                                        <input id="fileupload" type="file" name="userfile" >
+                                        <?php if($action=='insert') {?>
                                         <input type="hidden" name="product_id" id="product_id" value="<?php echo !empty($productDraft) ? $productDraft->product_id : "";?>">
                                         <input type="hidden" name="image_id" id="image_id" value="<?php echo !empty($productImgDraft) ? $productImgDraft->image_id : "";?>">
+                                    	<?php } else {?>
+										<input type="hidden" name="product_id" id="product_id" value="<?php echo !empty($product) ? $product->product_id : "";?>">
+                                        <input type="hidden" name="image_id" id="image_id" value="<?php echo !empty($productImg) ? $productImg->image_id : "";?>">
+                                    	
+                                    	<?php } ?>
                                     </span>
                                 </div>
 							</div>
@@ -89,12 +134,16 @@
                                     <div id="files" class="files"></div>
                                 </div>
 							</div>
-						</form>
 					</div>
 					<div class="box-footer clearfix">
-						<button class="pull-right btn btn-default" id="submit">
+						<?php if($action=='insert') { ?>
+						<button class="pull-right btn btn-default" id="<?php echo $action;?>-product">
 							Submit <i class="fa fa-arrow-circle-right"></i>
+						<?php } else { ?>
+							<input class="pull-right btn btn-default"  value="Submit" type="submit">
+						<?php } ?>
 						</button>
+						</form>
 					</div>
 				</div>
 

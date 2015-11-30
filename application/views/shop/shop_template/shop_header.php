@@ -1,270 +1,131 @@
-<!--A Design by W3layouts 
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html>
 <head>
-<title><?php echo (isset($title)) ? $title : ''; ?> | Online Shop Ecommerce</title>
-<link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="<?php echo base_url();?>assets/js/jquery-1.11.3.min.js"></script>
-<!-- Custom Theme files -->
-<!--theme-style-->
-<link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" type="text/css" media="all" />	
-<!--//theme-style-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Free Style Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--fonts-->
-<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-<!--//fonts-->
-<script type="text/javascript" src="<?php echo base_url();?>assets/js/move-top.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/js/easing.js"></script>
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-	$(".scroll").click(function(event){		
-		event.preventDefault();
-		$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-	});
-});
-$(window).bind('scroll', function () {
-	if ($(window).scrollTop() > 50) {
-		$('.header-bottom').addClass('fixed');
-	} else {
-		$('.header-bottom').removeClass('fixed');
-	}
-});
-</script>	
-<!-- start menu -->
-<script src="<?php echo base_url();?>assets/js/simpleCart.min.js"> </script>
-<link href="<?php echo base_url();?>assets/css/memenu.css" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="<?php echo base_url();?>assets/js/memenu.js"></script>
-<script>$(document).ready(function(){$(".memenu").memenu();});</script>
-<script type="text/javascript">
-var site_url = '<?php echo site_url()?>';
-</script>				
+
+<!-- Basic Page Needs
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Jackston Official</title>
+  <meta name="description" content="Web Service Indonesia">
+  <meta name="author" content="haidarvm, Maulana D. Syah">
+
+<!-- Mobile Specific Metas
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- FONT
+–––––––––––––––––––––––––––––––––––––––––––––––––– 
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>-->
+
+<!-- CSS
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="<?php echo base_url();?>assets/css/normalize.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>assets/css/skeleton.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>assets/css/custom.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>assets/css/menu.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>assets/css/tab.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>assets/css/slide.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>assets/css/accordion.css">
+
+<!-- Favicon
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="<?php echo img_url()?>favicon.png" />
+
+  
+
 </head>
-<body> 
-	<!--top-header-->
-	<div class="top-header">
+<script type="text/javascript">
+var site_url = '<?php echo base_url()?>';
+</script>
+<body>
+
+<!--   Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<!--   Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="header">
+  	<div class="container">
+	    <img alt="Jackston" src="<?php echo base_url()?>assets/img/logo.png"/>
+	</div><!-- End container -->
+</div><!-- End header -->
+
+<!--   Search
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="search">
 	<div class="container">
-		<div class="top-header-main">
-			<div class="col-md-4 top-header-left">
-				<div class="search-bar">
-					<input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-					<input type="submit" value="">
-				</div>
-			</div>
-			<div class="col-md-4 top-header-middle">
-				<a href="#"><img src="<?php echo base_url();?>assets/img/logo.png" alt="" /></a>
-			</div>
-			<div class="col-md-4 top-header-right">
-				<div class="cart box_1">
-						<a href="checkout.html">
-						<h3> <div class="total">
-							<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
-							<img src="<?php echo base_url();?>assets/img/cart-1.png" alt="" />
-						</a>
-						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-						<div class="clearfix"> </div>
-					</div>
-			</div>
-			<div class="clearfix"></div>
+		<div class="cSearch">
+			<p><a href="#"><b>HELP</b></a></p>
+			<span><b><a href="<?php echo site_url()?>user/profile">Your Account </a>|<a href="<?php echo site_url()?>cart/list"> Your Basket </a>|<a href="<?php echo site_url()?>cart/checkout"> Checkout</a></b></span>
+		</div>
+		<div class="clear"></div>
+		<div class="cari">
+			<img src="<?php echo base_url()?>assets/img/search.png"/>
 		</div>
 	</div>
 </div>
-<!--top-header-->
-	<!--bottom-header-->
-	<div class="header-bottom">
-		<div class="container">
-			<div class="top-nav">
-				<ul class="memenu skyblue">
-					<li class="active"><a href="#">Home</a></li>
-					<li class="grid"><a href="#">Collection</a>
-						<div class="mepanel">
-							<div class="row">
-								<div class="col1 me-one">
-									<h4>Shop</h4>
-									<ul>
-										<li><a href="#">New Arrivals</a></li>
-										<li><a href="#">Men</a></li>
-										<li><a href="#">Women</a></li>
-										<li><a href="#">Accessories</a></li>
-										<li><a href="#">Kids</a></li>
-										<li><a href="#">login</a></li>
-										<li><a href="#">Brands</a></li>
-										<li><a href="#">My Shopping Bag</a></li>
-									</ul>
-								</div>
-								<div class="col1 me-one">
-									<h4>Style Zone</h4>
-									<ul>
-										<li><a href="#">Men</a></li>
-										<li><a href="#">Women</a></li>
-										<li><a href="#">Brands</a></li>
-										<li><a href="#">Kids</a></li>
-										<li><a href="#">Accessories</a></li>
-										<li><a href="#">Style Videos</a></li>
-									</ul>	
-								</div>
-								<div class="col1 me-one">
-									<h4>Popular Brands</h4>
-									<ul>
-										<li><a href="#">Levis</a></li>
-										<li><a href="#">Persol</a></li>
-										<li><a href="#">Nike</a></li>
-										<li><a href="#">Edwin</a></li>
-										<li><a href="#">New Balance</a></li>
-										<li><a href="#">Jack & Jones</a></li>
-										<li><a href="#">Paul Smith</a></li>
-										<li><a href="#">Ray-Ban</a></li>
-										<li><a href="#">Wood Wood</a></li>
-									</ul>	
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="grid"><a href="#">Campaign</a>
-						<div class="mepanel">
-							<div class="row">
-								<div class="col1 me-one">
-									<h4>Shop</h4>
-									<ul>
-										<li><a href="#">New Arrivals</a></li>
-										<li><a href="#">Men</a></li>
-										<li><a href="#">Women</a></li>
-										<li><a href="#">Accessories</a></li>
-										<li><a href="#">Kids</a></li>
-										<li><a href="#">login</a></li>
-										<li><a href="#">Brands</a></li>
-										<li><a href="#">My Shopping Bag</a></li>
-									</ul>
-								</div>
-								<div class="col1 me-one">
-									<h4>Style Zone</h4>
-									<ul>
-										<li><a href="#">Men</a></li>
-										<li><a href="#">Women</a></li>
-										<li><a href="#">Brands</a></li>
-										<li><a href="#">Kids</a></li>
-										<li><a href="#">Accessories</a></li>
-										<li><a href="#">Style Videos</a></li>
-									</ul>	
-								</div>
-								<div class="col1 me-one">
-									<h4>Popular Brands</h4>
-									<ul>
-										<li><a href="#">Levis</a></li>
-										<li><a href="#">Persol</a></li>
-										<li><a href="#">Nike</a></li>
-										<li><a href="#">Edwin</a></li>
-										<li><a href="#">New Balance</a></li>
-										<li><a href="#">Jack & Jones</a></li>
-										<li><a href="#">Paul Smith</a></li>
-										<li><a href="#">Ray-Ban</a></li>
-										<li><a href="#">Wood Wood</a></li>
-									</ul>	
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="grid"><a href="#">CRHONICAL</a>
-						<div class="mepanel">
-							<div class="row">
-								<div class="col1 me-one">
-									<h4>Shop</h4>
-									<ul>
-										<li><a href="#">New Arrivals</a></li>
-										<li><a href="#">Men</a></li>
-										<li><a href="#">Women</a></li>
-										<li><a href="#">Accessories</a></li>
-										<li><a href="#">Kids</a></li>
-										<li><a href="#">login</a></li>
-										<li><a href="#">Brands</a></li>
-										<li><a href="#">My Shopping Bag</a></li>
-									</ul>
-								</div>
-								<div class="col1 me-one">
-									<h4>Style Zone</h4>
-									<ul>
-										<li><a href="#">Men</a></li>
-										<li><a href="#">Women</a></li>
-										<li><a href="#">Brands</a></li>
-										<li><a href="#">Kids</a></li>
-										<li><a href="#">Accessories</a></li>
-										<li><a href="#">Style Videos</a></li>
-									</ul>	
-								</div>
-								<div class="col1 me-one">
-									<h4>Popular Brands</h4>
-									<ul>
-										<li><a href="#">Levis</a></li>
-										<li><a href="#">Persol</a></li>
-										<li><a href="#">Nike</a></li>
-										<li><a href="#">Edwin</a></li>
-										<li><a href="#">New Balance</a></li>
-										<li><a href="#">Jack & Jones</a></li>
-										<li><a href="#">Paul Smith</a></li>
-										<li><a href="#">Ray-Ban</a></li>
-										<li><a href="#">Wood Wood</a></li>
-									</ul>	
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="grid"><a href="#">Jackston</a>
-						<div class="mepanel">
-							<div class="row">
-								<div class="col1 me-one">
-									<h4>Shop</h4>
-									<ul>
-										<li><a href="#">New Arrivals</a></li>
-										<li><a href="#">Men</a></li>
-										<li><a href="#">Women</a></li>
-										<li><a href="#">Accessories</a></li>
-										<li><a href="#">Kids</a></li>
-										<li><a href="#">login</a></li>
-										<li><a href="#">Brands</a></li>
-										<li><a href="#">My Shopping Bag</a></li>
-									</ul>
-								</div>
-								<div class="col1 me-one">
-									<h4>Style Zone</h4>
-									<ul>
-										<li><a href="#">Men</a></li>
-										<li><a href="#">Women</a></li>
-										<li><a href="#">Brands</a></li>
-										<li><a href="#">Kids</a></li>
-										<li><a href="#">Accessories</a></li>
-										<li><a href="#">Style Videos</a></li>
-									</ul>	
-								</div>
-								<div class="col1 me-one">
-									<h4>Popular Brands</h4>
-									<ul>
-										<li><a href="#">Levis</a></li>
-										<li><a href="#">Persol</a></li>
-										<li><a href="#">Nike</a></li>
-										<li><a href="#">Edwin</a></li>
-										<li><a href="#">New Balance</a></li>
-										<li><a href="#">Jack & Jones</a></li>
-										<li><a href="#">Paul Smith</a></li>
-										<li><a href="#">Ray-Ban</a></li>
-										<li><a href="#">Wood Wood</a></li>
-									</ul>	
-								</div>
-							</div>
-						</div>
-					</li>
+
+<!--   Menu
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div id="menu" class="normal">
+  <div class="container">
+	<nav class="clearfix">
+	   <ul class="clearfix">
+	        <li><a href="<?php echo site_url()?>">HOME</a></li>  
+	        <li id="m2c"><a href="<?php echo site_url()?>product">COLLECTION</a></li>  
+	        <li><a href="<?php echo page_url()?>contact">CAMPAIGN</a></li>  
+	        <li><a href="<?php echo page_url()?>contact">CRHONICAL</a></li>  
+	        <li id="m1c"><a href="<?php echo site_url()?>">JACKSTON</a></li>    
+	    </ul>  
+	    <a href="#" id="pull">Menu</a>  
+	</nav>
+	<div class="row" id="sub1">
+		<div class="six columns"><img src="<?php echo img_url()?>nob.png" /></div>
+		<div class="five columns" style="background: #FFFFFF;padding:10px;">
+			<div class="submen clear">
+				<div class="one-half column"><img src="<?php echo img_url()?>menu/m1.jpg"/></div>
+				<div class="one-half column"><b>Neal x Jackston</b><br/>blends the best of many unique stuff and ideas</div>
+			</div>
+			<div class="submen clear">
+				<div class="one-half column"><img src="<?php echo img_url()?>menu/m2.jpg"/></div>
+				<div class="one-half column"><b>WEED</b><br/>blends the best of many unique stuff and ideas into an</div>
+			</div>
+			<div class="submen clear">
+				<div class="one-half column"><img src="<?php echo img_url()?>menu/m3.jpg"/></div>
+				<div class="one-half column"><b>No Bull</b><br/>blends the best of many fakes</div>
+			</div>
+		</div>
+		<div class="one column"><img src="<?php echo img_url()?>nob.png" /></div>
+	</div>
+	<div class="row" id="sub2">
+		<div class="three columns noba"><img src="<?php echo img_url()?>nob.png" /></div>
+		<div class="nine columns">
+			<div class="submen">
+				<ul>
+					<li><a href="<?php echo site_url()?>product/tees">Tees</a></li>
+					<li><a href="<?php echo site_url()?>product/shirt">Shirts</a></li>
+					<li><a href="<?php echo site_url()?>product/tees">Polos</a></li>
+					<li><a href="<?php echo site_url()?>product/shirt">Cardigan</a></li>
+					<li><a href="<?php echo site_url()?>product/shirt">Sweats</a></li>
+				</ul>
+				<ul>
+					<li><a href="<?php echo site_url()?>product/jackets">Bomber Jacket</a></li>
+					<li><a href="<?php echo site_url()?>product/jackets">Canvas Jacket</a></li>
+					<li><a href="<?php echo site_url()?>product/jackets">Varsity Jacket</a></li>
+					<li><a href="<?php echo site_url()?>product/jackets">Denim Jacket</a></li>
+					<li><a href="<?php echo site_url()?>product/jackets">Coat Jacket</a></li>
+				</ul>
+				<ul>
+					<li><a href="<?php echo site_url()?>product/trousers">Trousers</a></li>
+					<li><a href="<?php echo site_url()?>product/longsleave">Longs Leave</a></li>
+					<li><a href="<?php echo site_url()?>product/jeans">Jeans</a></li>
+<!-- 					<li><a href="#">Short</a></li> -->
+<!-- 					<li><a href="#">Bags</a></li> -->
+					<li><a href="<?php echo site_url()?>product/accessories">Asserories</a></li>
+					<li><img class="noba" src="<?php echo img_url()?>nob.png" width="100%" height="1px"/></li>
 				</ul>
 			</div>
-			<div class="clearfix"> </div>
 		</div>
 	</div>
-	<!--bottom-header-->
+  </div><!-- End container -->
+</div><!-- End menu -->

@@ -1,0 +1,60 @@
+.containeracc {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.item {
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	border-top: 2px solid grey;
+	cursor: pointer;
+	color: #000;
+	background-image: url('../img/arr/rights.png');
+	background-repeat: no-repeat;
+	background-position: right;
+	ba
+}
+
+.item-data {
+	display: none;
+	height: auto;
+	border-top: 1px solid grey;
+}
+
+.active {
+	color: #000;
+}
+
+.item-data div {
+	margin: 10px;
+}
+
+#accordion {
+	width: 300px;
+	margin: 50px auto;
+	background-color: silver;
+	border: 2px solid black;
+}
+
+#accordion h2.accordion-header {
+	cursor: pointer;
+	background-color: black;
+	font: bold 12px Arial, Sans-Serif;
+	color: white;
+	padding: 5px 15px;
+	margin: 0 0;
+	border-bottom: 1px solid #292929;
+}
+
+#accordion h2.active {
+	background-color: orange;
+	color: black;
+}
+
+#accordion div {
+	height: 150px;
+	padding: 10px 15px;
+}
