@@ -31,3 +31,4 @@
 [Thu Aug 13 11:50:49.567516 2015] [:error] [pid 6600] [client 127.0.0.1:49303] PHP Fatal error:  Call to undefined method MY_Loader::libraries() in /home/public_html/shop/application/shop/controllers/admin/Product.php on line 11
 [Thu Aug 13 17:20:41.250362 2015] [:error] [pid 14838] [client 127.0.0.1:52963] PHP Fatal error:  Cannot use object of type stdClass as array in /home/public_html/shop/application/shop/controllers/Upload.php on line 55, referer: http://shop.dev/admin
 [Sat Aug 15 12:25:22.022098 2015] [:error] [pid 9713] [client 127.0.0.1:50211] PHP Fatal error:  Cannot redeclare MProduct::getProductDraft() in /home/public_html/shop/application/shop/models/Mproduct.php on line 29
+[Thu Dec 03 22:08:38.039102 2015] [:error] [pid 15619] [client 127.0.0.1:55766] PHP Parse error:  syntax error, unexpected ')' in /home/public_html/shop/application/views/home.php on line 355
