@@ -82,8 +82,15 @@ h1,h2,h3,h4,h5,h6,label,p{
 .total {
   display: inline-block;
 }
-.header{
+.header-home{
     background: url(../img/banner.jpg) no-repeat 0px 0px;
+    width: 100%;
+    background-size: cover;
+    min-height: 704px;
+    display: block;
+}
+.header{
+    background: #fff;
     width: 100%;
     background-size: cover;
     min-height: 704px;
@@ -94,7 +101,7 @@ h1,h2,h3,h4,h5,h6,label,p{
 
 }
 .header-top{
-	  background: rgba(255, 93, 86, 0.26);
+	  background: gray;
 }
 .header-info {
   padding: 0;

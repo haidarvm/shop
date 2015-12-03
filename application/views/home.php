@@ -1,7 +1,7 @@
 
 	<div class="banner">
 		<div class="banner-top">
-	         <h2>THIS IS I-WEAR</h2>
+	         <h2>GoGreenSouvenir</h2>
 	         <p>Goggles or safety glasses are forms of protective eyewear<span>fthat usually enclose or protect the area surrounding the eye in order to prevent particulates.</span></p>
 </div>
 	<div class="now">
@@ -355,8 +355,8 @@
 				<?php foreach($products as $product) {?>
 				<div class="col-md-3 product-left"> 
 					<div class="p-one simpleCart_shelfItem">							
-							<a href="single.html">
-								<img src="<?php echo img_url();?>n1.jpg" alt="" />
+							<a href="<?php echo site_url().'product/detail/'.$product->product_id;?>">
+								<img src="<?php echo prod_thumb_url().$product->image_id.$product->ext;?>" alt="" />
 								<div class="mask">
 									<span>Quick View</span>
 								</div>

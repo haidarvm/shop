@@ -1,171 +1,453 @@
-
-<!--   Content top
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<div class="content">
-  <div class="container">
-  	<div class="row">
-  		<div class="twelve columns"><!-- Top info -->
-  			<div class="infotop">
-  				<p>Deftly tailored from very fine woven egyptian cotton, these shirts are smooth to the touch, though still maintain their elegant shape. Essential pieces that easily cross from the week into the weekend.</p>
-  			</div>
-  		</div><!-- End Top info -->
-  	</div>
-  </div>
+<script>
+  	jQuery(document).ready(function($){
+  		$('.close-carbon-adv').on('click', function(){
+  			$('#carbonads-container').hide();
+  		});
+  	});
+</script>
+<script src="<?php echo base_url()?>assets/js/main.js"></script>
+<!-- Resource jQuery -->
+<div class="back">
+	<h2>Product Details</h2>
 </div>
+<!---->
+<div class="product">
+	<div class="container">
+		<div class="col-md-3 product-price">
 
-<!--   Content produk
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<div class="content">
-  <div class="container">
-		<div class="row">
-			<div class="twelve columns">
-				<div id="" class="">  
-					<div id="slider1">
-					  <a class="control_next"><img src="gmb/arr/arrRight.png"/></a>
-					  <a class="control_prev"><img src="gmb/arr/arrLeft.png"/></a>
-					  <ul>
-					    <li>
-					    	<div class="acc1">
-								<img class="one-half column gmbprodukc" src="gmb/produk/1.jpg"/>
-								<img class="one-half column gmbprodukc" src="gmb/produk/2.jpg"/>
-							</div>
-					    </li>
-					    <li>
-					    	<div class="acc2">
-								<img class="one-half column gmbprodukc" src="<?php echo prod_url().$product->product_id.$product->ext?>"/>
-								<div class="one-half column">
-									<h6 class="kiri">Aføn D Shirt (Produk 1)</h6>
-									<div class="row" style="margin-bottom:1px !important;">
-										<div class="one-half column kiri">(toscamanu)</div>
-										<div class="one-half column kanan">USD $25</div>
-									</div>
-									<div class='item' style='background-image: url("gmb/arr/arrBottom.png");'>DESCRIPTION</div>
-									<div class='item-data active' style="display: block;">
-										<div>
-											Carfied from 100% long staple cotton fabric, we’re confident our Short Sleeve is the best shirt you”ll ever wear. Combining a clean aesthetic with a classic fit, it’s available in a host of colours and is the perfect foundation for your everyday looks.
-										</div>
-									</div>
+			<div class=" rsidebar span_1_of_left">
+				<div class="of-left">
+					<h3 class="cate">CATEGORIES</h3>
+				</div>
+				<ul class="menu">
+					<li class="item1"><a href="#">Men </a>
+						<ul class="cute">
+							<li class="subitem1"><a href="#">Cute Kittens </a></li>
+							<li class="subitem2"><a href="#">Strange Stuff </a></li>
+							<li class="subitem3"><a href="#">Automatic Fails </a></li>
+						</ul></li>
+					<li class="item2"><a href="#">Women </a>
+						<ul class="cute">
+							<li class="subitem1"><a href="#">Cute Kittens </a></li>
+							<li class="subitem2"><a href="#">Strange Stuff </a></li>
+							<li class="subitem3"><a href="#">Automatic Fails </a></li>
+						</ul></li>
+					<li class="item3"><a href="#">Kids</a>
+						<ul class="cute">
+							<li class="subitem1"><a href="#">Cute Kittens </a></li>
+							<li class="subitem2"><a href="#">Strange Stuff </a></li>
+							<li class="subitem3"><a href="#">Automatic Fails </a></li>
+						</ul></li>
+					<li class="item4"><a href="#">Accesories</a>
+						<ul class="cute">
+							<li class="subitem1"><a href="#">Cute Kittens </a></li>
+							<li class="subitem2"><a href="#">Strange Stuff </a></li>
+							<li class="subitem3"><a href="#">Automatic Fails </a></li>
+						</ul></li>
 
-									<div class='item'>COLOURS</div>
-									<div class='item-data'>
-										<div class="row">
-											<div class="two columns">
-												<img width="100%" src="gmb/produk/color/1.jpg"/>
-											</div>
-											<div class="two columns">
-												<img width="100%" src="gmb/produk/color/2.jpg"/>
-											</div>
-											<div class="two columns">
-												<img width="100%" src="gmb/produk/color/3.jpg"/>
-											</div>
-											<div class="two columns">
-												<img width="100%" src="gmb/produk/color/4.jpg"/>
-											</div>
-										</div>
-									</div>
+					<li class="item4"><a href="#">Shoes</a>
+						<ul class="cute">
+							<li class="subitem1"><a href="#">Cute Kittens </a></li>
+							<li class="subitem2"><a href="#">Strange Stuff </a></li>
+							<li class="subitem3"><a href="#">Automatic Fails </a></li>
+						</ul></li>
+				</ul>
+			</div>
+			<!--initiate accordion-->
+			<script type="text/javascript">
+			$(function() {
+			    var menu_ul = $('.menu > li > ul'),
+			           menu_a  = $('.menu > li > a');
+			    menu_ul.hide();
+			    menu_a.click(function(e) {
+			        e.preventDefault();
+			        if(!$(this).hasClass('active')) {
+			            menu_a.removeClass('active');
+			            menu_ul.filter(':visible').slideUp('normal');
+			            $(this).addClass('active').next().stop(true,true).slideDown('normal');
+			        } else {
+			            $(this).removeClass('active');
+			            $(this).next().stop(true,true).slideUp('normal');
+			        }
+			    });
+			
+			});
+		</script>
+			<!---->
+			<div class="product-middle">
 
-									<div class='item'>SIZING</div>
-									<div class='item-data' >
-										<table class="u-full-width">
-								          <thead>
-								            <tr>
-								              <th>SIZE</th>
-								              <th>S</th>
-								              <th>M</th>
-								              <th>L</th>
-								              <th>XL</th>
-								            </tr>
-								          </thead>
-								          <tbody>
-								            <tr>
-								              <td>CHEST</td>
-								              <td>18.1" 46cm</td>
-								              <td>19.3" 49cm</td>
-								              <td>20.1" 51cm</td>
-								              <td>20,8" 53cm</td>
-								            </tr>
-								            <tr>
-								              <td>LENGHT</td>
-								              <td>26,7" 68cm</td>
-								              <td>27,9" 71cm</td>
-								              <td>28,7" 73cm</td>
-								              <td>29,5" 75cm</td>
-								            </tr>
-								          </tbody>
-								        </table>
-									</div>
-									<div>
-										
-									</div>
-									<div class='item'>FABRIC</div>
-									<div class='item-data' >
-										<div>
-											100% Egyptian cotton, Classic fit, True to size - if between sizes opt for the smaller, Model wears a size Medium, Model measures - height: 6’2”/188cm, chest: 40”/101.5cm, waist: 32''/81cm, Machine wash at 40 degrees, Made in Indonesia.
-										</div>
-									</div>
+				<div class="fit-top">
+					<h6 class="shop-top">LOREM IPSUM</h6>
+					<a href="#" class="shop-now">SHOP NOW</a>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="sellers">
+				<div class="of-left-in">
+					<h3 class="tag">TAGS</h3>
+				</div>
+				<div class="tags">
+					<ul>
+						<li><a href="#">design</a></li>
+						<li><a href="#">fashion</a></li>
+						<li><a href="#">lorem</a></li>
+						<li><a href="#">dress</a></li>
+						<li><a href="#">fashion</a></li>
+						<li><a href="#">dress</a></li>
+						<li><a href="#">design</a></li>
+						<li><a href="#">dress</a></li>
+						<li><a href="#">design</a></li>
+						<li><a href="#">fashion</a></li>
+						<li><a href="#">lorem</a></li>
+						<li><a href="#">dress</a></li>
 
-									<div class='item'>SHIPPING & RETURNS</div>
-									<div class='item-data' >
-										<div>
-FREE SHIPPING purchase over $200, Standard Post: 10-12 working days.
-<p>For full delivery and returns information, <u>click here</u>.</p>
-Due to the high volume of orders during promotions or sales, we regret we cannot make any amendments to purchases once ordered and the processing of returns will take longer than normal.
-										</div>
-									</div>
-									<div class="twelve columns">
-										<div class="one-half column">
-											<select class="u-full-width" id="inputSize">
-												<option value="Option 1">SELECT SIZE</option>
-												<option value="Option 2">Small</option>
-												<option value="Option 3">Medium</option>
-												<option value="Option 2">Large</option>
-												<option value="Option 3">Extra Large</option>
-											</select>
-											<input value="ADD TO WISHLIST" type="submit" class="button button-primary u-full-width">
-											<div class="sosmed">
-												<img width="15%" src="gmb/sosmed/twitter.png"></img>
-												<img width="15%" src="gmb/sosmed/instagram.png"></img>
-												<img width="15%" src="gmb/sosmed/facebook.png"></img>
-												<img width="15%" src="gmb/sosmed/tumblr.png"></img>
-												<img width="15%" src="gmb/sosmed/pinterest.png"></img>
-												<img width="15%" src="gmb/sosmed/youtube.png"></img>
-											</div>
-										</div>
-										<div class="one-half column">
-QUANTITY<input value="-" type="submit" class="butq" style="padding: 0px 15px;margin-left:5px;"><input value="1" type="text" class="butq"><input value="+" type="submit" class="butq" style="padding: 0px 15px;">
-										<input value="ADD TO BASKET" type="submit" class="button button-primary u-full-width" style="margin-top:10px;">
-										<a href="D006.html"><u><i><b>Email a Friend</b></i></u></a>
-										</div>
-									</div>
-								</div>
-							</div>
-					    </li>
-					  </ul>  
+						<div class="clearfix"></div>
+					</ul>
+
+				</div>
+
+			</div>
+			<!---->
+			<div class="product-bottom">
+				<div class="of-left-in">
+					<h3 class="best">BEST SELLERS</h3>
+				</div>
+				<div class="product-go">
+					<div class=" fashion-grid">
+						<a href="#"><img class="img-responsive "
+							src="<?php echo img_url();?>f1.jpg" alt=""></a>
+
 					</div>
-					<!--<div style="clear: both"></div>-->
-					<div class="kiri" style="float: left;margin-top: 10px;">|#| Kushin = [in] "Aføn D Shirt" (toscamanu) TM</div>
-					<div class=""><a class="tutup closetab"><img src="gmb/close-icon.png"></img></a></div>
-				</div>  
-				<div id="p1b" class="tab_text">  
-					p1b content.
-				</div>  
-				<div id="p1c" class="tab_text">  
-					p1c content.
-					<div class="closetab">close</div>
-				</div> 
-				<div id="p1d" class="tab_text">  
-					p1d content.
-					<div class="closetab">close</div>
+					<div class=" fashion-grid1">
+						<h6 class="best2">
+							<a href="#">Lorem ipsum dolor sit amet consectetuer </a>
+						</h6>
+
+						<span class=" price-in1"> $40.00</span>
+					</div>
+
+					<div class="clearfix"></div>
+				</div>
+				<div class="product-go">
+					<div class=" fashion-grid">
+						<a href="#"><img class="img-responsive "
+							src="<?php echo img_url();?>f2.jpg" alt=""></a>
+
+					</div>
+					<div class="fashion-grid1">
+						<h6 class="best2">
+							<a href="#">Lorem ipsum dolor sit amet consectetuer </a>
+						</h6>
+
+						<span class=" price-in1"> $40.00</span>
+					</div>
+
+					<div class="clearfix"></div>
+				</div>
+				<div class="product-go">
+					<div class=" fashion-grid">
+						<a href="#"><img class="img-responsive "
+							src="<?php echo img_url();?>f3.jpg" alt=""></a>
+
+					</div>
+					<div class=" fashion-grid1">
+						<h6 class="best2">
+							<a href="#">Lorem ipsum dolor sit amet consectetuer </a>
+						</h6>
+						<ul class="star-footer">
+							<li><a href="#"><i> </i></a></li>
+							<li><a href="#"><i> </i></a></li>
+							<li><a href="#"><i> </i></a></li>
+							<li><a href="#"><i> </i></a></li>
+							<li><a href="#"><i> </i></a></li>
+						</ul>
+						<span class=" price-in1"><small>$70.00</small> $40.00</span>
+					</div>
+
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class=" per1">
+				<img class="img-responsive" src="<?php echo img_url();?>pi3.jpg"
+					alt="">
+				<div class="six1">
+					<h4>DISCOUNT</h4>
+					<p>Up to</p>
+					<span>60%</span>
 				</div>
 			</div>
 		</div>
-	</div><!-- End container -->
-</div><!-- End home info -->
+		<!---->
+		<div class="col-md-9 product-price1">
+			<div class="col-md-5 single-top">
+				<div class="flexslider">
+					<ul class="slides">
+						<li data-thumb="<?php echo img_url();?>si.jpg"><img
+							src="<?php echo img_url();?>si3.jpeg" /></li>
+						<li data-thumb="<?php echo img_url();?>s2.jpg"><img
+							src="<?php echo img_url();?>si1.jpeg" /></li>
+						<li data-thumb="<?php echo img_url();?>s3.jpeg"><img
+							src="<?php echo img_url();?>si2.jpeg" /></li>
+						<li data-thumb="<?php echo img_url();?>s1.jpg"><img
+							src="<?php echo img_url();?>s12.jpeg" /></li>
+					</ul>
+				</div>
+				<!-- FlexSlider -->
+				<script defer
+					src="<?php echo base_url()?>assets/js/jquery.flexslider.js"></script>
+				<link rel="stylesheet"
+					href="<?php echo base_url()?>assets/css/flexslider.css"
+					type="text/css" media="screen" />
 
-<script>
-	$(document).ready(function(){
-// 		$('.tab_link').tab();
-// 		$('#slider1').slide();
-// 		$('.item').accordion();
-	});
+				<script>
+// Can also be used with $(document).ready()
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide",
+    controlNav: "thumbnails"
+  });
+});
 </script>
+			</div>
+			<div class="col-md-7 single-top-in simpleCart_shelfItem">
+				<div class="single-para ">
+					<h4><?php echo $product->name?></h4>
+					<div class="star-on">
+						<ul class="star-footer">
+							<li><a href="#"><i> </i></a></li>
+							<li><a href="#"><i> </i></a></li>
+							<li><a href="#"><i> </i></a></li>
+							<li><a href="#"><i> </i></a></li>
+							<li><a href="#"><i> </i></a></li>
+						</ul>
+						<div class="review">
+							<a href="#"> 1 customer review </a>
+
+						</div>
+						<div class="clearfix"></div>
+					</div>
+
+					<h5 class="item_price"><?php echo number_format($product->price);?></h5>
+					<div class="available">
+						<ul>
+							<li>Color <select>
+									<option>Silver</option>
+									<option>Black</option>
+									<option>Dark Black</option>
+									<option>Red</option>
+							</select></li>
+							<li class="size-in">Size<select>
+									<option>Large</option>
+									<option>Medium</option>
+									<option>small</option>
+									<option>Large</option>
+									<option>small</option>
+							</select></li>
+							<div class="clearfix"></div>
+						</ul>
+					</div>
+					<ul class="tag-men">
+						<li><span>TAG</span> <span class="women1">: Women,</span></li>
+						<li><span>SKU</span> <span class="women1">: CK09</span></li>
+					</ul>
+					<a href="#" class="add-cart item_add">ADD TO CART</a>
+
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<!---->
+			<div class="cd-tabs">
+				<nav>
+					<ul class="cd-tabs-navigation">
+						<li><a data-content="fashion" href="#0">Description </a></li>
+						<li><a data-content="cinema" href="#0">Addtional Informatioan</a></li>
+						<li><a data-content="television" href="#0" class="selected ">Reviews
+								(1)</a></li>
+
+					</ul>
+				</nav>
+				<ul class="cd-tabs-content">
+					<li data-content="fashion">
+						<div class="facts">
+							<p>There are many variations of passages of Lorem Ipsum
+								available, but the majority have suffered alteration in some
+								form, by injected humour, or randomised words which don't look
+								even slightly believable. If you are going to use a passage of
+								Lorem Ipsum, you need to be sure there isn't anything
+								embarrassing hidden in the middle of text. All the Lorem Ipsum
+								generators on the Internet tend to repeat predefined chunks as
+								necessary, making this the first true generator on the Internet.
+								It uses a dictionary of over 200 Latin words, combined</p>
+							<ul>
+								<li>Research</li>
+								<li>Design and Development</li>
+								<li>Porting and Optimization</li>
+								<li>System integration</li>
+								<li>Verification, Validation and Testing</li>
+								<li>Maintenance and Support</li>
+							</ul>
+						</div>
+
+					</li>
+					<li data-content="cinema">
+						<div class="facts1">
+
+							<div class="color">
+								<p>Color</p>
+								<span>Blue, Black, Red</span>
+								<div class="clearfix"></div>
+							</div>
+							<div class="color">
+								<p>Size</p>
+								<span>S, M, L, XL</span>
+								<div class="clearfix"></div>
+							</div>
+
+						</div>
+
+					</li>
+					<li data-content="television" class="selected">
+						<div class="comments-top-top">
+							<div class="top-comment-left">
+								<img class="img-responsive" src="<?php echo img_url();?>co.png"
+									alt="">
+							</div>
+							<div class="top-comment-right">
+								<h6>
+									<a href="#">Hendri</a> - September 3, 2014
+								</h6>
+								<ul class="star-footer">
+									<li><a href="#"><i> </i></a></li>
+									<li><a href="#"><i> </i></a></li>
+									<li><a href="#"><i> </i></a></li>
+									<li><a href="#"><i> </i></a></li>
+									<li><a href="#"><i> </i></a></li>
+								</ul>
+								<p>Wow nice!</p>
+							</div>
+							<div class="clearfix"></div>
+							<a class="add-re" href="#">ADD REVIEW</a>
+						</div>
+
+					</li>
+					<div class="clearfix"></div>
+				</ul>
+			</div>
+			<!---->
+
+			<div class="top-product">
+				<h3 class="real">Related Products</h3>
+
+				<div class="col-md-4 chain-grid  simpleCart_shelfItem">
+					<div class="grid-span-1">
+						<a href="single.html"><img class="img-responsive "
+							src="<?php echo img_url();?>pi10.jpg" alt=" "> </a>
+					</div>
+					<div class="grid-chain-bottom ">
+						<h6>
+							<a href="single.html">Sun Glasses #1</a>
+						</h6>
+						<div class="star-price">
+							<div class="price-at">
+								<ul class="star-footer">
+									<li><a href="#"><i> </i></a></li>
+									<li><a href="#"><i> </i></a></li>
+									<li><a href="#"><i> </i></a></li>
+									<li><a href="#"><i> </i></a></li>
+									<li><a href="#"><i> </i></a></li>
+								</ul>
+							</div>
+							<div class="price-at-bottom ">
+								<span class="item_price">$ 75.00</span>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="cart-add">
+							<a class="add1 item_add" href="#">ADD TO CART <i> </i></a> <a
+								class="add2" href="#"><i> </i></a>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-md-4 chain-grid simpleCart_shelfItem">
+					<div class="grid-span-1">
+						<a href="single.html"><img class="img-responsive "
+							src="<?php echo img_url();?>pi6.jpg" alt=" "> </a>
+					</div>
+					<div class="grid-chain-bottom ">
+						<h6>
+							<a href="single.html">Stylish Glasses #1</a>
+						</h6>
+						<div class="star-price">
+							<div class="price-at">
+								<ul class="star-footer">
+									<li><a href="#"><i> </i></a></li>
+									<li><a href="#"><i> </i></a></li>
+									<li><a href="#"><i> </i></a></li>
+									<li><a href="#"><i> </i></a></li>
+									<li><a href="#"><i> </i></a></li>
+								</ul>
+							</div>
+							<div class="price-at-bottom ">
+								<span class="item_price">$ 65.00</span>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="cart-add">
+							<a class="add1 item_add" href="#">ADD TO CART <i> </i></a> <a
+								class="add2" href="#"><i> </i></a>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 chain-grid simpleCart_shelfItem">
+					<div class="grid-span-1">
+						<a href="single.html"><img class="img-responsive "
+							src="<?php echo img_url();?>pi5.jpg" alt=" "> </a>
+					</div>
+					<div class="grid-chain-bottom ">
+						<h6>
+							<a href="single.html">Specs Glasses #1</a>
+						</h6>
+						<div class="star-price">
+							<div class="price-at">
+								<ul class="star-footer">
+									<li><a href="#"><i> </i></a></li>
+									<li><a href="#"><i> </i></a></li>
+									<li><a href="#"><i> </i></a></li>
+									<li><a href="#"><i> </i></a></li>
+									<li><a href="#"><i> </i></a></li>
+								</ul>
+							</div>
+							<div class="price-at-bottom ">
+								<span class="item_price">$ 85.00</span>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="cart-add">
+							<a class="add1 item_add" href="#">ADD TO CART <i> </i></a> <a
+								class="add2" href="#"><i> </i></a>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<!---->
+<div class="bottom-grid1">
+
+	<div class="fit1">
+		<h3>HAPPY SHOPPING</h3>
+		<p>Lorem Ipsum sit amet consectuer adipiscing elit sed diam nonummy
+			nibh euismod</p>
+	</div>
+</div>
+<!---->

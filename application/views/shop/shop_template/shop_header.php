@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>I wear A Ecommerce Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
+<title>GoGreenSouvenir | Home</title>
 <link href="<?php echo base_url()?>assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="<?php echo base_url()?>assets/js/jquery-1.11.3.min.js"></script>
@@ -70,7 +70,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 				</div>
 			</div>	
-<div class="header">
+<?php 
+if($this->uri->segment(1)=="home" || empty($this->uri->segment(1))) {
+	$header = 'header-home';
+} else {
+	$header = 'header';
+}
+?>
+<div class="<?php echo $header;?> header5">
 	<div class="header-top">
 
 			<div class="header-bottom">

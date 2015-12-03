@@ -40,11 +40,7 @@ var url_upload = site_url + "upload/do_upload/" + product_id + "/" + image_id;
 console.log('top log =' + url_upload);
 
 $(function() {
-<<<<<<< HEAD
 	$('#insert-product').click(
-=======
-	$('#submit-product').click(
->>>>>>> c4ffc4ff3f863a3591232a245e197f0679b9f4e1
 			function() {
 				$('#quick-product-box').block({
 					message : '<h1>Processing</h1>',
@@ -199,7 +195,6 @@ $(function() {
 				});
 
 			});
-<<<<<<< HEAD
 		$.fn.digits = function() {
 			return this.each(function() {
 				$(this).text(
@@ -222,6 +217,4 @@ $(function() {
 		      location.href = $(this).val();
 		   });
 
-=======
->>>>>>> c4ffc4ff3f863a3591232a245e197f0679b9f4e1
 });

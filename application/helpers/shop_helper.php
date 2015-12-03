@@ -285,3 +285,7 @@ function dump($params) {
     var_dump($params);
     echo '</pre>';
 }
+
+function checkHome() {
+	
+}

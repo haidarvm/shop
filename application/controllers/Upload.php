@@ -15,7 +15,7 @@ class Upload extends MY_Controller {
         //echo $upload_path_url;
         $config['upload_path'] = FCPATH . 'assets/product/';
         $dataDraftImg['product_id'] = $product_id;
-        $dataDraftImg['name'] = 'draft';
+        $dataDraftImg['img_name'] = 'draft';
         // echo 'prod from upload ='.$product_id.'<br>';
         $image_id = $this->mproduct->insertQuickProductImg($dataDraftImg);
         // $image_id = ! empty($image_id) ? $image_id : $this->mproduct->insertQuickProductImg($dataDraftImg);
@@ -62,7 +62,7 @@ class Upload extends MY_Controller {
             
             $files[] = $info;
             $data_upload['image_id'] = $image_id;
-            $data_upload['name'] = $data['client_name'];
+            $data_upload['img_name'] = $data['client_name'];
             $data_upload['ext'] = strtolower($data['file_ext']);
             $data_upload['size'] = $data['file_size'];
             $data_upload['width'] = $data['image_width'];
