@@ -198,15 +198,6 @@ $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + 
 					<div class="clearfix"></div>
 				</div>
 			</div>
-			<div class=" per1">
-				<a href="single.html"><img class="img-responsive"
-					src="<?php echo img_url();?>n7.jpg" alt="">
-					<div class="six1">
-						<h4>DISCOUNT</h4>
-						<p>Up to</p>
-						<span>60%</span>
-					</div></a>
-			</div>
 		</div>
 
 		<div class="col-md-9 product-price1">
@@ -276,6 +267,7 @@ $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + 
 					 }
 				} ?>
 			</div>
+			<?php echo $pagination; ?>
 			<ul class="start">
 				<li><a href="#"><i> </i></a></li>
 				<li><span>1</span></li>

@@ -85,7 +85,7 @@ if($this->uri->segment(1)=="home" || empty($this->uri->segment(1))) {
 			<div class="header-bottom">
 			<div class="container">			
 				<div class="logo">
-					<h1><a href="index.html">I-<span>wear</span></a></h1>
+					<h1><a href="index.html">Go<span>GreenSouvenir</span></a></h1>
 				</div>
 		 <!---->
 		 
