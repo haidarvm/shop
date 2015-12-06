@@ -100,7 +100,6 @@
 						<li><a href="#">fashion</a></li>
 						<li><a href="#">lorem</a></li>
 						<li><a href="#">dress</a></li>
-
 						<div class="clearfix"></div>
 					</ul>
 
@@ -132,7 +131,6 @@
 					<div class=" fashion-grid">
 						<a href="#"><img class="img-responsive "
 							src="<?php echo img_url();?>f2.jpg" alt=""></a>
-
 					</div>
 					<div class="fashion-grid1">
 						<h6 class="best2">
@@ -182,23 +180,14 @@
 			<div class="col-md-5 single-top">
 				<div class="flexslider">
 					<ul class="slides">
-						<li data-thumb="<?php echo img_url();?>si.jpg"><img
-							src="<?php echo img_url();?>si3.jpeg" /></li>
-						<li data-thumb="<?php echo img_url();?>s2.jpg"><img
-							src="<?php echo img_url();?>si1.jpeg" /></li>
-						<li data-thumb="<?php echo img_url();?>s3.jpeg"><img
-							src="<?php echo img_url();?>si2.jpeg" /></li>
-						<li data-thumb="<?php echo img_url();?>s1.jpg"><img
-							src="<?php echo img_url();?>s12.jpeg" /></li>
+						<?php foreach ($images as $img) {?>
+						<li data-thumb="<?php echo prod_thumb_url().$img->image_id.$img->ext;?>"><img src="<?php echo prod_small_url().$img->image_id.$img->ext;?>" /></li>
+						<?php } ?>
 					</ul>
 				</div>
 				<!-- FlexSlider -->
-				<script defer
-					src="<?php echo base_url()?>assets/js/jquery.flexslider.js"></script>
-				<link rel="stylesheet"
-					href="<?php echo base_url()?>assets/css/flexslider.css"
-					type="text/css" media="screen" />
-
+				<script defer src="<?php echo base_url()?>assets/js/jquery.flexslider.js"></script>
+				<link rel="stylesheet" href="<?php echo base_url()?>assets/css/flexslider.css" type="text/css" media="screen" />
 				<script>
 // Can also be used with $(document).ready()
 $(window).load(function() {
@@ -228,24 +217,6 @@ $(window).load(function() {
 					</div>
 
 					<h5 class="item_price"><?php echo number_format($product->price);?></h5>
-					<div class="available">
-						<ul>
-							<li>Color <select>
-									<option>Silver</option>
-									<option>Black</option>
-									<option>Dark Black</option>
-									<option>Red</option>
-							</select></li>
-							<li class="size-in">Size<select>
-									<option>Large</option>
-									<option>Medium</option>
-									<option>small</option>
-									<option>Large</option>
-									<option>small</option>
-							</select></li>
-							<div class="clearfix"></div>
-						</ul>
-					</div>
 					<ul class="tag-men">
 						<li><span>TAG</span> <span class="women1">: Women,</span></li>
 						<li><span>SKU</span> <span class="women1">: CK09</span></li>
@@ -259,25 +230,16 @@ $(window).load(function() {
 			<div class="cd-tabs">
 				<nav>
 					<ul class="cd-tabs-navigation">
-						<li><a data-content="fashion" href="#0">Description </a></li>
+						<li><a data-content="desc" href="#0" class="selected ">Description </a></li>
 						<li><a data-content="cinema" href="#0">Addtional Informatioan</a></li>
-						<li><a data-content="television" href="#0" class="selected ">Reviews
-								(1)</a></li>
+						<li><a data-content="television" href="#0" >Reviews (1)</a></li>
 
 					</ul>
 				</nav>
 				<ul class="cd-tabs-content">
-					<li data-content="fashion">
+					<li data-content="desc"  class="selected">
 						<div class="facts">
-							<p>There are many variations of passages of Lorem Ipsum
-								available, but the majority have suffered alteration in some
-								form, by injected humour, or randomised words which don't look
-								even slightly believable. If you are going to use a passage of
-								Lorem Ipsum, you need to be sure there isn't anything
-								embarrassing hidden in the middle of text. All the Lorem Ipsum
-								generators on the Internet tend to repeat predefined chunks as
-								necessary, making this the first true generator on the Internet.
-								It uses a dictionary of over 200 Latin words, combined</p>
+							<p><?php echo $product->description?></p>
 							<ul>
 								<li>Research</li>
 								<li>Design and Development</li>
@@ -306,7 +268,7 @@ $(window).load(function() {
 						</div>
 
 					</li>
-					<li data-content="television" class="selected">
+					<li data-content="television">
 						<div class="comments-top-top">
 							<div class="top-comment-left">
 								<img class="img-responsive" src="<?php echo img_url();?>co.png"
@@ -337,7 +299,6 @@ $(window).load(function() {
 
 			<div class="top-product">
 				<h3 class="real">Related Products</h3>
-
 				<div class="col-md-4 chain-grid  simpleCart_shelfItem">
 					<div class="grid-span-1">
 						<a href="single.html"><img class="img-responsive "

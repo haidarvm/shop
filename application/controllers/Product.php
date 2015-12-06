@@ -31,6 +31,7 @@ class Product extends CI_Controller {
 	public function detail($id) {
 		$data['title'] = 'Details';
 		$data['product'] = $this->mproduct->getProduct($id);
+		$data['images'] = $this->mproduct->getAllProductImg($id);
 		$this->load->shop_template('shop/product_detail', $data);
 	}
 
