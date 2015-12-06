@@ -25,7 +25,7 @@
 <!-- Morris chart -->
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/morris.css">
 <!-- jvectormap -->
-<link rel="stylesheet" href="<?php echo base_url();?>assets/js/jquery-jvectormap-1.2.2.css">
+<link rel="stylesheet" href="<?php echo base_url();?>assets/css/jquery-jvectormap-1.2.2.css">
 <!-- Date Picker -->
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/datepicker3.css">
 <!-- Daterange picker -->

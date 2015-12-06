@@ -20,11 +20,11 @@ class MProduct extends CI_Model {
         // $limit = 16;
         $limit = $limit ? $limit : $limit = 16;
         $offset = $offset ? $offset : $offset = 0;
-        $this->db->join('product_image', 'product_image.product_id = product.product_id');
-        $this->db->join('category', 'category.category_id = product.category_id');
+        $this->db->join('product_image', 'product_image.product_id = product.product_id','left');
+        $this->db->join('category', 'category.category_id = product.category_id','inner');
         $this->db->group_by('product.product_id');
-        $not_draft = array('product_image.img_name !=' => 'draft');
-        $where = ! empty($cat) ? array('category.slug' => $cat) : $not_draft;
+        //$not_draft = array('product_image.img_name !=' => 'draft');
+        $where = ! empty($cat) ? array('category.slug' => $cat) : array();
         $query = $this->db->get_where('product', $where, $limit, $offset);
         //echo $this->db->last_query();
         return checkRes($query);

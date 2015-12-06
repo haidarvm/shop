@@ -442,12 +442,3 @@ $(window).load(function() {
 	</div>
 </div>
 <!---->
-<div class="bottom-grid1">
-
-	<div class="fit1">
-		<h3>HAPPY SHOPPING</h3>
-		<p>Lorem Ipsum sit amet consectuer adipiscing elit sed diam nonummy
-			nibh euismod</p>
-	</div>
-</div>
-<!---->

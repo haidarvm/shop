@@ -2,7 +2,7 @@
         <div class="pull-right hidden-xs">
           <b>Version</b> 2.2.0
         </div>
-        <strong>Copyright &copy; 2014-<?php echo date('Y')?> <a href="http://almsaeedstudio.com">Almsaeed Studio</a> &amp; Engine by <a href="https://github.com/haidarvm">haidarvm</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; <?php echo date('Y')?> <a href="http://almsaeedstudio.com">Almsaeed Studio</a> &amp; Engine by <a href="https://github.com/haidarvm">haidarvm</a>.</strong> All rights reserved.
       </footer>
 
       <!-- Control Sidebar -->

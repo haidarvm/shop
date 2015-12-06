@@ -53,12 +53,6 @@
 									<textarea name="description_en" class="textarea" placeholder="English Description" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?php echo isset($category) ? $category->description_en : '';?></textarea>
 								</div>
 							</div>
-							<!-- <div class="form-group">
-								<label class="col-sm-2 control-label" for="name">Stock</label>
-								<div class="col-sm-10">
-									<input id="qty" name="qty" class="form-control number" type="text" placeholder="Qty">
-								</div>
-							</div> -->
 					</div>
 					<div class="box-footer clearfix">
                         <input type="hidden" name="category_id" id="category_id" value="<?php echo !empty($category) ? $category->category_id : "";?>">
