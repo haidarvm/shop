@@ -85,13 +85,13 @@ if($this->uri->segment(1)=="home" || empty($this->uri->segment(1))) {
 			<div class="header-bottom">
 			<div class="container">			
 				<div class="logo">
-					<h1><a href="index.html">Go<span>GreenSouvenir</span></a></h1>
+					<h1><a href="index.html">Go<span>Green</span></a></h1>
 				</div>
 		 <!---->
 		 
 			<div class="top-nav">
 				<ul class="memenu skyblue"><li class="active"><a href="index.html">Home</a></li>
-					<li class="grid"><a href="#">Men</a>
+					<li class="grid"><a href="#">Tanaman Hias</a>
 						<div class="mepanel">
 							<div class="row">
 								<div class="col1 me-one">
@@ -179,52 +179,6 @@ if($this->uri->segment(1)=="home" || empty($this->uri->segment(1))) {
 							</div>
 						</div>
 					</li>
-					<li class="grid"><a href="#">Kids</a>
-						<div class="mepanel">
-							<div class="row">
-								<div class="col1 me-one">
-									<h4>Shop</h4>
-									<ul>
-										<li><a href="about.html">About</a></li>
-										<li><a href="product.html">Men</a></li>
-										<li><a href="product.html">Women</a></li>
-										<li><a href="product.html">Accessories</a></li>
-										<li><a href="product.html">Kids</a></li>
-										<li><a href="product.html">login</a></li>
-										<li><a href="product.html">Brands</a></li>
-										<li><a href="product.html">My Shopping Bag</a></li>
-									</ul>
-								</div>
-								<div class="col1 me-one">
-									<h4>Style Zone</h4>
-									<ul>
-										<li><a href="product.html">Men</a></li>
-										<li><a href="product.html">Women</a></li>
-										<li><a href="product.html">Brands</a></li>
-										<li><a href="product.html">Kids</a></li>
-										<li><a href="product.html">Accessories</a></li>
-										<li><a href="product.html">Style Videos</a></li>
-									</ul>	
-								</div>
-								<div class="col1 me-one">
-									<h4>Popular Brands</h4>
-									<ul>
-										<li><a href="product.html">Levis</a></li>
-										<li><a href="product.html">Persol</a></li>
-										<li><a href="product.html">Nike</a></li>
-										<li><a href="product.html">Edwin</a></li>
-										<li><a href="product.html">New Balance</a></li>
-										<li><a href="product.html">Jack & Jones</a></li>
-										<li><a href="product.html">Paul Smith</a></li>
-										<li><a href="product.html">Ray-Ban</a></li>
-										<li><a href="product.html">Wood Wood</a></li>
-									</ul>	
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="grid"><a href="typography.html">Typo</a>
-						
 					</li>
 					<li class="grid"><a href="contact.html">Contact</a>
 						

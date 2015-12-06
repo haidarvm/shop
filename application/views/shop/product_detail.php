@@ -165,15 +165,6 @@
 					<div class="clearfix"></div>
 				</div>
 			</div>
-			<div class=" per1">
-				<img class="img-responsive" src="<?php echo img_url();?>pi3.jpg"
-					alt="">
-				<div class="six1">
-					<h4>DISCOUNT</h4>
-					<p>Up to</p>
-					<span>60%</span>
-				</div>
-			</div>
 		</div>
 		<!---->
 		<div class="col-md-9 product-price1">

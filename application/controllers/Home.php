@@ -18,7 +18,7 @@ class Home extends CI_Controller {
 
 	public function show() {
 		$data['title'] = 'Home';
-		$data['products'] = $this->mproduct->getAllProductCat($cat=NULL,5);
+		$data['products'] = $this->mproduct->getAllProductCat($cat=NULL,4);
 		$this->load->shop_template('home', $data);
 	}
 

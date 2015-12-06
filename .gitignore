@@ -1,4 +1,4 @@
-/files/
+#ignore this configuration if not working add this "git rm -r  --cached ." "git add ." "git commit -m 'fixed'"
 /shop-access_log
 /shop-error_log
 application/config/database*
