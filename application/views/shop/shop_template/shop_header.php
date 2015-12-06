@@ -11,9 +11,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="<?php echo base_url()?>assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="<?php echo base_url()?>assets/js/jquery-1.11.3.min.js"></script>
+				<script type="text/javascript" src="<?php echo base_url()?>assets/js/jquery-ui.min.js"></script>
 <!-- Custom Theme files -->
 <!--theme-style-->
 <link href="<?php echo base_url()?>assets/css/style.css" rel="stylesheet" type="text/css" media="all" />	
+				<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/jquery-ui.css">
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

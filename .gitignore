@@ -1,5 +1,5 @@
 /files/
-/pasar-access_log
-/pasar-error_log
+/shop-access_log
+/shop-error_log
 application/config/database*
 application/config/config.php
