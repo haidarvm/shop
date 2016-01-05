@@ -2,7 +2,9 @@
 	<div class="banner">
 		<div class="banner-top">
 	         <h2>GoGreenSouvenir</h2>
-	         <p>Goggles or safety glasses are forms of protective eyewear<span>fthat usually enclose or protect the area surrounding the eye in order to prevent particulates.</span></p>
+	         <h3>Apa itu Go Green Souvenir?</h3>
+	         <p>Go green souvenir adalah suatu brand usaha yang mengutamakan produk kampanye peduli lingkungan, berupa produk kreatif. Komponen dalam go green souvenir yaitu tanaman, bahan ramah lingkungan, kata-kata ajakan untuk ikut peran serta dalam penghijauan serta bahan penghias lainnya.
+	.</span></p>
 </div>
 	<div class="now">
 	         <a class="morebtn" href="product.html">Explore</a>
