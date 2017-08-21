@@ -217,6 +217,7 @@ $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + 
 			<div class="product-right-top">
 					<?php 
 					$i=0;
+					if (! empty($product)) {
 					foreach($product as $row) {
 						$i++;
 							if($i % 4 ===0 || $i ==1 ) {
@@ -265,7 +266,7 @@ $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + 
 			            echo "<div class='clearfix'></div>\n";
 						echo "</div>\n";
 					 }
-				} ?>
+				} }?>
 			</div>
 			<?php echo $pagination; ?>
 			<ul class="start">

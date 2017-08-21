@@ -44,8 +44,7 @@ class User extends CI_Controller {
                 $login = $this->muser->login($post['email'], $post['password']);
                 if ($login !== FALSE) {
                     define_sess($login->username, $login->user_id, $login->full_name, $login->email, $login->level_id);
-                    // print_r($_SESSION);exit;
-                    if($_SESSION['cart_contents']) {
+                    if(isset($_SESSION['cart_contents'])) {
                         previous_url();
                     } else {
                         redirect('product/tees');
