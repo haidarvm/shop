@@ -32,7 +32,7 @@ class Dashboard extends MY_Controller {
         }
         $data['productImgDraft'] = $this->mproduct->getProductImgDraft($data['productDraft']->product_id);
         $data['categories'] = $this->mcategory->getAllCategories();
-        $this->load->admin_template('admin/dashboard', $data);
+        $this->load->view('admin/product_list', $data);
     }
 
     public function insert_quick_product() {
